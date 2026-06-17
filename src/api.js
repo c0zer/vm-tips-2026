@@ -70,6 +70,7 @@ export async function loadResults(matchList, teamNames) {
     matchResults,
     roundTeams: data.roundTeams ?? { sexton: [], atton: [], kvarts: [], semi: [], final: [], winner: '', thirdPlace: '' },
     goalscorers: data.goalscorers ?? {},
+    liveMatches: data.liveMatches ?? [],
     updatedAt: data.updatedAt,
   };
 }

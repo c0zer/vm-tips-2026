@@ -26,6 +26,25 @@ function setStatus(msg, isError = false) {
   el.className = isError ? 'status error' : 'status';
 }
 
+function renderLiveBanner(liveMatches) {
+  let banner = document.getElementById('live-banner');
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'live-banner';
+    document.querySelector('.table-wrap').before(banner);
+  }
+  if (!liveMatches || liveMatches.length === 0) {
+    banner.innerHTML = '';
+    banner.className = '';
+    return;
+  }
+  const matchList = liveMatches
+    .map(m => `<span class="live-match">${m.home} ${m.score} ${m.away}${m.minute ? ' <em>' + m.minute + '\'</em>' : ''}</span>`)
+    .join('');
+  banner.className = 'live-banner';
+  banner.innerHTML = `<span class="live-dot"></span><strong>LIVE</strong> – Pågående match(er): ${matchList} · Poängen kan fluktuera`;
+}
+
 function renderTable(scores) {
   const tbody = document.querySelector('#leaderboard tbody');
   tbody.innerHTML = '';
@@ -53,13 +72,14 @@ function escHtml(str) {
 async function refresh() {
   setStatus('Laddar resultat…');
   try {
-    const { matchResults, roundTeams, goalscorers, updatedAt } = await loadResults(
+    const { matchResults, roundTeams, goalscorers, liveMatches, updatedAt } = await loadResults(
       tipsData.matchList, teamNames
     );
     const scores = calcAllScores(
       tipsData.participants, matchResults, roundTeams, goalscorers, teamNames
     );
     renderTable(scores);
+    renderLiveBanner(liveMatches);
     setStatus('');
     if (updatedAt) {
       const d = new Date(updatedAt);

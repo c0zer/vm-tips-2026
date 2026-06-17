@@ -53,19 +53,29 @@ async function main() {
   // Build groupMatches: { matchKey: { result, goals } }
   // matchKey = "HomeTeamEN_AwayTeamEN" for later lookup by api.js in browser
   const groupMatches = {};
+  const liveMatches = [];
+
   for (const m of groupData.matches ?? []) {
     const homeEN = m.homeTeam?.shortName ?? m.homeTeam?.name ?? '';
     const awayEN = m.awayTeam?.shortName ?? m.awayTeam?.name ?? '';
-    const score = m.score?.fullTime ?? {};
+    const score = m.score?.fullTime ?? m.score?.currentScore ?? {};
     const h = score.home ?? null;
     const a = score.away ?? null;
     const result = deriveResult(h, a, m.status);
     if (result !== null) {
       groupMatches[`${homeEN}_${awayEN}`] = { result, goals: h + a };
     }
+    if (m.status === 'IN_PLAY' || m.status === 'PAUSED') {
+      liveMatches.push({
+        home: homeEN,
+        away: awayEN,
+        score: `${h ?? 0}–${a ?? 0}`,
+        minute: m.minute ?? null,
+      });
+    }
   }
-  console.log(`  ${Object.keys(groupMatches).length} finished group matches`);
 
+  // Also check knockout matches for live status
   console.log('Fetching knockout matches...');
   const koData = await apiGet(`/v4/competitions/${COMPETITION}/matches?stage=ROUND_OF_32,ROUND_OF_16,QUARTER_FINALS,SEMI_FINALS,THIRD_PLACE,FINAL`);
 
@@ -105,7 +115,17 @@ async function main() {
       if (stage === 'FINAL') roundTeams.winner = winner;
       if (stage === 'THIRD_PLACE') roundTeams.thirdPlace = winner;
     }
+    if (m.status === 'IN_PLAY' || m.status === 'PAUSED') {
+      const score = m.score?.currentScore ?? m.score?.fullTime ?? {};
+      liveMatches.push({
+        home: homeEN,
+        away: awayEN,
+        score: `${score.home ?? 0}–${score.away ?? 0}`,
+        minute: m.minute ?? null,
+      });
+    }
   }
+  console.log(`  ${liveMatches.length} live matches`);
 
   console.log('Fetching scorers...');
   const scorersData = await apiGet(`/v4/competitions/${COMPETITION}/scorers?limit=100`);
@@ -119,6 +139,7 @@ async function main() {
 
   const results = {
     updatedAt: new Date().toISOString(),
+    liveMatches,
     groupMatches,
     roundTeams: {
       sexton: [...roundTeams.sexton],
