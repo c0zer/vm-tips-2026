@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-17T17:10:52.685Z",
+  "updatedAt": "2026-06-17T17:15:57.001Z",
   "liveMatches": [
     {
       "home": "Portugal",
       "away": "Congo DR",
-      "score": "0–0",
+      "score": "1–0",
       "minute": null
     }
   ],
@@ -90,8 +90,8 @@
       "goals": 4
     },
     "Portugal_Congo DR": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
