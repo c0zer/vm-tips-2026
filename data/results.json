@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-17T20:50:50.513Z",
+  "updatedAt": "2026-06-17T21:01:08.425Z",
   "liveMatches": [
     {
       "home": "England",
       "away": "Croatia",
-      "score": "2–1",
+      "score": "2–2",
       "minute": null
     }
   ],
@@ -94,8 +94,8 @@
       "goals": 2
     },
     "England_Croatia": {
-      "result": "1",
-      "goals": 3
+      "result": "X",
+      "goals": 4
     }
   },
   "roundTeams": {
@@ -161,6 +161,7 @@
     "Marko Arnautovic": 1,
     "Joao Neves": 1,
     "Yoane Wissa": 1,
-    "Martin Baturina": 1
+    "Martin Baturina": 1,
+    "Petar Musa": 1
   }
 }
