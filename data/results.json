@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-17T20:40:53.296Z",
+  "updatedAt": "2026-06-17T20:47:31.437Z",
   "liveMatches": [
     {
       "home": "England",
       "away": "Croatia",
-      "score": "1–0",
+      "score": "2–1",
       "minute": null
     }
   ],
@@ -95,7 +95,7 @@
     },
     "England_Croatia": {
       "result": "1",
-      "goals": 1
+      "goals": 3
     }
   },
   "roundTeams": {
@@ -115,6 +115,7 @@
     "Elijah Just": 2,
     "Kylian Mbappé": 2,
     "Erling Haaland": 2,
+    "Harry Kane": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
@@ -160,7 +161,6 @@
     "Marko Arnautovic": 1,
     "Joao Neves": 1,
     "Yoane Wissa": 1,
-    "Harry Kane": 1,
     "Martin Baturina": 1
   }
 }
