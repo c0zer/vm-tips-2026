@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-17T20:10:56.609Z",
+  "updatedAt": "2026-06-17T20:20:44.424Z",
   "liveMatches": [
     {
       "home": "England",
       "away": "Croatia",
-      "score": "0–0",
+      "score": "1–0",
       "minute": null
     }
   ],
@@ -16,10 +16,6 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
-    },
-    "Canada_Bosnia-H.": {
-      "result": "X",
-      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
@@ -94,8 +90,8 @@
       "goals": 2
     },
     "England_Croatia": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -159,6 +155,7 @@
     "Ali Olwan": 1,
     "Marko Arnautovic": 1,
     "Joao Neves": 1,
-    "Yoane Wissa": 1
+    "Yoane Wissa": 1,
+    "Harry Kane": 1
   }
 }
