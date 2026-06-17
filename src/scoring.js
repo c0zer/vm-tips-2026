@@ -19,6 +19,11 @@
  * teamNames: { "Mexiko": "Mexico", ... }  Swedish→English mapping
  */
 
+/** Strip accents for fuzzy player name matching */
+function stripAccents(str) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 /** Convert Swedish team name to English */
 function toEN(swedishName, teamNames) {
   return teamNames[swedishName] ?? swedishName;
@@ -148,9 +153,13 @@ function calcGoalscorerScore(participant, goalscorers) {
 
   let pts = 0;
   for (const [playerName, listed] of Object.entries(appearances)) {
-    // Direct name match against API response (case-insensitive fallback)
+    // Match with direct lookup, then case-insensitive, then accent-stripped fallback
+    const normalizedTip = stripAccents(playerName).toLowerCase();
     const goals = goalscorers[playerName]
-      ?? goalscorers[Object.keys(goalscorers).find(k => k.toLowerCase() === playerName.toLowerCase())]
+      ?? goalscorers[Object.keys(goalscorers).find(k =>
+          k.toLowerCase() === playerName.toLowerCase() ||
+          stripAccents(k).toLowerCase() === normalizedTip
+        )]
       ?? 0;
     if (goals > 0) {
       const credited = Math.min(listed, goals);
