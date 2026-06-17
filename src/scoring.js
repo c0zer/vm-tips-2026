@@ -148,8 +148,10 @@ function calcGoalscorerScore(participant, goalscorers) {
 
   let pts = 0;
   for (const [playerName, listed] of Object.entries(appearances)) {
-    // Try English name lookup; also try direct match (some players have same name)
-    const goals = goalscorers[playerName] ?? goalscorers[toEN(playerName)] ?? 0;
+    // Direct name match against API response (case-insensitive fallback)
+    const goals = goalscorers[playerName]
+      ?? goalscorers[Object.keys(goalscorers).find(k => k.toLowerCase() === playerName.toLowerCase())]
+      ?? 0;
     if (goals > 0) {
       const credited = Math.min(listed, goals);
       pts += triangular(credited);
