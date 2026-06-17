@@ -34,8 +34,8 @@ function renderLiveBanner(liveMatches) {
     document.querySelector('.table-wrap').before(banner);
   }
   if (!liveMatches || liveMatches.length === 0) {
-    banner.innerHTML = '';
-    banner.className = '';
+    banner.className = 'live-banner live-banner--idle';
+    banner.innerHTML = `<span class="live-dot live-dot--idle"></span>Inga matcher pågår just nu`;
     return;
   }
   const matchList = liveMatches

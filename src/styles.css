@@ -166,4 +166,13 @@ footer {
   padding: 0.1rem 0.4rem;
   font-weight: 600;
 }
-.live-match em { font-style: normal; opacity: 0.7; }
+.live-banner--idle {
+  background: rgba(148, 163, 184, 0.08);
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.live-dot--idle {
+  background: var(--muted);
+  animation: none;
+}
