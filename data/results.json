@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-17T17:50:44.788Z",
+  "updatedAt": "2026-06-17T18:01:20.366Z",
   "liveMatches": [
     {
       "home": "Portugal",
       "away": "Congo DR",
-      "score": "1–0",
+      "score": "1–1",
       "minute": null
     }
   ],
@@ -90,8 +90,8 @@
       "goals": 4
     },
     "Portugal_Congo DR": {
-      "result": "1",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -154,6 +154,7 @@
     "Romano Schmid": 1,
     "Ali Olwan": 1,
     "Marko Arnautovic": 1,
-    "Joao Neves": 1
+    "Joao Neves": 1,
+    "Yoane Wissa": 1
   }
 }
