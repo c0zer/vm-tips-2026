@@ -20,21 +20,32 @@ if (!API_KEY) {
 const COMPETITION = 'WC';
 const OUT_FILE = path.join(__dirname, '..', 'data', 'results.json');
 
-function apiGet(urlPath) {
+function apiGet(urlPath, retries = 3) {
   return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.football-data.org',
-      path: urlPath,
-      headers: { 'X-Auth-Token': API_KEY },
-    };
-    https.get(options, (res) => {
-      let body = '';
-      res.on('data', d => body += d);
-      res.on('end', () => {
-        try { resolve(JSON.parse(body)); }
-        catch (e) { reject(new Error(`Parse error: ${e.message}\nBody: ${body.slice(0, 200)}`)); }
+    const attempt = (attemptsLeft) => {
+      const options = {
+        hostname: 'api.football-data.org',
+        path: urlPath,
+        headers: { 'X-Auth-Token': API_KEY },
+        timeout: 10000,
+      };
+      https.get(options, (res) => {
+        let body = '';
+        res.on('data', d => body += d);
+        res.on('end', () => {
+          try { resolve(JSON.parse(body)); }
+          catch (e) { reject(new Error(`Parse error: ${e.message}\nBody: ${body.slice(0, 200)}`)); }
+        });
+      }).on('error', (err) => {
+        if (attemptsLeft > 1) {
+          console.warn(`  ⚠ ${err.code} on ${urlPath} – retrying (${attemptsLeft - 1} left)...`);
+          setTimeout(() => attempt(attemptsLeft - 1), 2000);
+        } else {
+          reject(err);
+        }
       });
-    }).on('error', reject);
+    };
+    attempt(retries);
   });
 }
 
