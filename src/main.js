@@ -1,12 +1,12 @@
 /**
  * main.js
- * Fetches tips + live results, calculates scores, renders leaderboard.
+ * Loads tips + pre-fetched results, calculates scores, renders leaderboard.
  */
 
-import { fetchMatchResults, fetchRoundTeams, fetchGoalscorers } from './api.js';
+import { loadResults } from './api.js';
 import { calcAllScores } from './scoring.js';
 
-const REFRESH_INTERVAL_MS = 5 * 60 * 1000;  // 5 minutes
+const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
 
 let tipsData = null;
 let teamNames = null;
@@ -26,21 +26,14 @@ function setStatus(msg, isError = false) {
   el.className = isError ? 'status error' : 'status';
 }
 
-function setLastUpdated() {
-  document.getElementById('last-updated').textContent =
-    'Uppdaterad: ' + new Date().toLocaleTimeString('sv-SE');
-}
-
 function renderTable(scores) {
   const tbody = document.querySelector('#leaderboard tbody');
   tbody.innerHTML = '';
-
   scores.forEach((row, i) => {
     const tr = document.createElement('tr');
     if (i === 0) tr.classList.add('rank-1');
     else if (i === 1) tr.classList.add('rank-2');
     else if (i === 2) tr.classList.add('rank-3');
-
     tr.innerHTML = `
       <td class="rank">${i + 1}</td>
       <td class="name">${escHtml(row.name)}</td>
@@ -58,24 +51,26 @@ function escHtml(str) {
 }
 
 async function refresh() {
-  setStatus('Hämtar resultat…');
+  setStatus('Laddar resultat…');
   try {
-    const [matchResults, roundTeams, goalscorers] = await Promise.all([
-      fetchMatchResults(tipsData.matchList, teamNames),
-      fetchRoundTeams(),
-      fetchGoalscorers(),
-    ]);
-
+    const { matchResults, roundTeams, goalscorers, updatedAt } = await loadResults(
+      tipsData.matchList, teamNames
+    );
     const scores = calcAllScores(
       tipsData.participants, matchResults, roundTeams, goalscorers, teamNames
     );
-
     renderTable(scores);
     setStatus('');
-    setLastUpdated();
+    if (updatedAt) {
+      const d = new Date(updatedAt);
+      document.getElementById('last-updated').textContent =
+        'Uppdaterad: ' + d.toLocaleString('sv-SE');
+    } else {
+      document.getElementById('last-updated').textContent = '';
+    }
   } catch (err) {
     console.error(err);
-    setStatus('Kunde inte hämta live-data: ' + err.message, true);
+    setStatus('Fel: ' + err.message, true);
   }
 }
 
@@ -86,7 +81,6 @@ async function init() {
     setStatus('Kunde inte ladda tipsdata: ' + err.message, true);
     return;
   }
-
   await refresh();
   setInterval(refresh, REFRESH_INTERVAL_MS);
 }

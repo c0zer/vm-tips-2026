@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "parse": "node scripts/parse-excel.js",
+    "fetch-results": "node scripts/fetch-results.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -76,3 +76,4 @@ VmTipsLive/
 - Sidan auto-uppdateras var 5:e minut
 - API-svar cachas i `sessionStorage` för att hålla sig inom rate limit (10 req/min)
 - Spelarnamn i målskyttartipsen matchas mot API:ets engelska namn – kontrollera vid avvikelser
+
