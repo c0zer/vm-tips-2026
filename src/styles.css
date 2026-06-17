@@ -1,0 +1,130 @@
+/* styles.css */
+
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --gold: #fbbf24;
+  --silver: #94a3b8;
+  --bronze: #d97706;
+  --error: #f87171;
+  --green: #34d399;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p {
+  color: var(--muted);
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.status {
+  min-height: 1.2em;
+}
+.status.error { color: var(--error); }
+
+.table-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+thead th {
+  background: var(--border);
+  padding: 0.75rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-align: left;
+}
+thead th.num { text-align: right; }
+
+tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,0.04); }
+
+tbody td {
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+}
+
+td.rank {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  width: 2.5rem;
+}
+
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.bold { font-weight: 700; font-size: 1.05rem; color: var(--text); }
+
+/* Top 3 medals */
+tr.rank-1 td.rank::before { content: '🥇 '; }
+tr.rank-2 td.rank::before { content: '🥈 '; }
+tr.rank-3 td.rank::before { content: '🥉 '; }
+
+tr.rank-1 td.name { color: var(--gold); font-weight: 600; }
+tr.rank-2 td.name { color: var(--silver); font-weight: 600; }
+tr.rank-3 td.name { color: var(--bronze); font-weight: 600; }
+
+tr.rank-1 { background: rgba(251,191,36,0.06); }
+tr.rank-2 { background: rgba(148,163,184,0.04); }
+tr.rank-3 { background: rgba(217,119,6,0.04); }
+
+footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}

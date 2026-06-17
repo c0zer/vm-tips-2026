@@ -1,0 +1,16 @@
+{
+  "name": "vmtipslive",
+  "version": "1.0.0",
+  "description": "VM Tips 2026 – Live Poängtavla",
+  "main": "index.js",
+  "scripts": {
+    "parse": "node scripts/parse-excel.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
