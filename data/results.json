@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T20:20:44.424Z",
+  "updatedAt": "2026-06-17T20:31:18.408Z",
   "liveMatches": [
     {
       "home": "England",
@@ -16,6 +16,10 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
