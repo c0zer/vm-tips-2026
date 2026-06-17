@@ -1,6 +1,87 @@
 {
-  "updatedAt": null,
-  "groupMatches": {},
+  "updatedAt": "2026-06-17T08:43:30.635Z",
+  "groupMatches": {
+    "Mexico_South Africa": {
+      "result": "1",
+      "goals": 2
+    },
+    "Korea Republic_Czechia": {
+      "result": "1",
+      "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
+    },
+    "USA_Paraguay": {
+      "result": "1",
+      "goals": 5
+    },
+    "Qatar_Switzerland": {
+      "result": "X",
+      "goals": 2
+    },
+    "Brazil_Morocco": {
+      "result": "X",
+      "goals": 2
+    },
+    "Haiti_Scotland": {
+      "result": "2",
+      "goals": 1
+    },
+    "Australia_Turkey": {
+      "result": "1",
+      "goals": 2
+    },
+    "Germany_Curaçao": {
+      "result": "1",
+      "goals": 8
+    },
+    "Netherlands_Japan": {
+      "result": "X",
+      "goals": 4
+    },
+    "Ivory Coast_Ecuador": {
+      "result": "1",
+      "goals": 1
+    },
+    "Sweden_Tunisia": {
+      "result": "1",
+      "goals": 6
+    },
+    "Spain_Cape Verde": {
+      "result": "X",
+      "goals": 0
+    },
+    "Belgium_Egypt": {
+      "result": "X",
+      "goals": 2
+    },
+    "Saudi Arabia_Uruguay": {
+      "result": "X",
+      "goals": 2
+    },
+    "Iran_New Zealand": {
+      "result": "X",
+      "goals": 4
+    },
+    "France_Senegal": {
+      "result": "1",
+      "goals": 4
+    },
+    "Iraq_Norway": {
+      "result": "2",
+      "goals": 5
+    },
+    "Argentina_Algeria": {
+      "result": "1",
+      "goals": 3
+    },
+    "Austria_Jordan": {
+      "result": "1",
+      "goals": 4
+    }
+  },
   "roundTeams": {
     "sexton": [],
     "atton": [],
@@ -10,5 +91,56 @@
     "winner": "",
     "thirdPlace": ""
   },
-  "goalscorers": {}
+  "goalscorers": {
+    "Lionel Messi": 3,
+    "Folarin Balogun": 2,
+    "Kai Havertz": 2,
+    "Yasin Ayari": 2,
+    "Elijah Just": 2,
+    "Kylian Mbappé": 2,
+    "Erling Haaland": 2,
+    "Julián Quiñones": 1,
+    "Raúl Jiménez": 1,
+    "Ladislav Krejčí": 1,
+    "In-beom Hwang": 1,
+    "Hyun-Gyu Oh": 1,
+    "Jovo Lukić": 1,
+    "Cyle Larin": 1,
+    "Mauricio": 1,
+    "Gio Reyna": 1,
+    "Breel Embolo": 1,
+    "Boualem Khoukhi": 1,
+    "Ismael Saibari": 1,
+    "Vinicius Junior": 1,
+    "John McGinn": 1,
+    "Nestor Irankunda": 1,
+    "Connor Metcalfe": 1,
+    "Felix Kalu Nmecha": 1,
+    "Livano Comenencia": 1,
+    "Nico Schlotterbeck": 1,
+    "Jamal Musiala": 1,
+    "Nathaniel Brown": 1,
+    "Deniz Undav": 1,
+    "Virgil van Dijk": 1,
+    "Keito Nakamura": 1,
+    "Crysencio Summerville": 1,
+    "Daichi Kamada": 1,
+    "Amad Diallo": 1,
+    "Alexander Isak": 1,
+    "Omar Rekik": 1,
+    "Viktor Gyökeres": 1,
+    "Mattias Svanberg": 1,
+    "Emam Ashour": 1,
+    "Abdulelah Al Amri": 1,
+    "Maximiliano Araújo": 1,
+    "Ramin Rezaeian": 1,
+    "Mohammad Mohebi": 1,
+    "Bradley Barcola": 1,
+    "Ibrahim M'Baye": 1,
+    "Aymen Hussein": 1,
+    "Leo Østigård": 1,
+    "Romano Schmid": 1,
+    "Ali Olwan": 1,
+    "Marko Arnautovic": 1
+  }
 }
