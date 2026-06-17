@@ -60,7 +60,7 @@ function buildMatchResultsMap(matchList, teamNames, groupMatches) {
  * Returns { matchResults, roundTeams, goalscorers }
  */
 export async function loadResults(matchList, teamNames) {
-  const res = await fetch('./data/results.json');
+  const res = await fetch(`./data/results.json?t=${Date.now()}`);
   if (!res.ok) throw new Error(`Could not load results.json: ${res.status}`);
   const data = await res.json();
 
