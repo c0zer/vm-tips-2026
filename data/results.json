@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-06-17T20:01:12.168Z",
-  "liveMatches": [],
+  "updatedAt": "2026-06-17T20:10:56.609Z",
+  "liveMatches": [
+    {
+      "home": "England",
+      "away": "Croatia",
+      "score": "0–0",
+      "minute": null
+    }
+  ],
   "groupMatches": {
     "Mexico_South Africa": {
       "result": "1",
@@ -85,6 +92,10 @@
     "Portugal_Congo DR": {
       "result": "X",
       "goals": 2
+    },
+    "England_Croatia": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
