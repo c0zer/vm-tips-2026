@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-06-18T04:40:49.172Z",
-  "liveMatches": [],
+  "updatedAt": "2026-06-18T04:50:48.665Z",
+  "liveMatches": [
+    {
+      "home": "Ghana",
+      "away": "Panama",
+      "score": "1–0",
+      "minute": null
+    }
+  ],
   "groupMatches": {
     "Mexico_South Africa": {
       "result": "1",
