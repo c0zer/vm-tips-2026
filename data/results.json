@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T17:40:48.227Z",
+  "updatedAt": "2026-06-18T17:50:46.960Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -99,8 +99,8 @@
       "goals": 4
     },
     "Czechia_South Africa": {
-      "result": "1",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -175,6 +175,7 @@
     "Abbosbek Fayzullaev": 1,
     "Luis Díaz": 1,
     "Jaminton Campaz": 1,
-    "Michal Sadílek": 1
+    "Michal Sadílek": 1,
+    "Teboho Mokoena": 1
   }
 }
