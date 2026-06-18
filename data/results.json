@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-18T03:30:55.407Z",
+  "updatedAt": "2026-06-18T03:40:43.244Z",
   "liveMatches": [
     {
       "home": "Uzbekistan",
       "away": "Colombia",
-      "score": "1–1",
+      "score": "1–2",
       "minute": null
     }
   ],
@@ -16,10 +16,6 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
-    },
-    "Canada_Bosnia-H.": {
-      "result": "X",
-      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
@@ -102,8 +98,8 @@
       "goals": 1
     },
     "Uzbekistan_Colombia": {
-      "result": "X",
-      "goals": 2
+      "result": "2",
+      "goals": 3
     }
   },
   "roundTeams": {
