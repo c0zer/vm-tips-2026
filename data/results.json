@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-18T02:40:44.161Z",
+  "updatedAt": "2026-06-18T02:50:42.441Z",
   "liveMatches": [
     {
       "home": "Uzbekistan",
       "away": "Colombia",
-      "score": "0–0",
+      "score": "0–1",
       "minute": null
     }
   ],
@@ -102,8 +102,8 @@
       "goals": 1
     },
     "Uzbekistan_Colombia": {
-      "result": "X",
-      "goals": 0
+      "result": "2",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -173,6 +173,7 @@
     "Petar Musa": 1,
     "Jude Bellingham": 1,
     "Marcus Rashford": 1,
-    "Caleb Yirenkyi": 1
+    "Caleb Yirenkyi": 1,
+    "Daniel Muñoz": 1
   }
 }
