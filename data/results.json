@@ -1,6 +1,12 @@
 {
-  "updatedAt": "2026-06-18T03:40:43.244Z",
+  "updatedAt": "2026-06-18T03:48:05.491Z",
   "liveMatches": [
+    {
+      "home": "Ghana",
+      "away": "Panama",
+      "score": "1–0",
+      "minute": null
+    },
     {
       "home": "Uzbekistan",
       "away": "Colombia",
@@ -16,6 +22,10 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
