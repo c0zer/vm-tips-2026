@@ -1,6 +1,12 @@
 {
-  "updatedAt": "2026-06-18T02:23:07.919Z",
+  "updatedAt": "2026-06-18T02:30:57.442Z",
   "liveMatches": [
+    {
+      "home": "Ghana",
+      "away": "Panama",
+      "score": "1–0",
+      "minute": null
+    },
     {
       "home": "Uzbekistan",
       "away": "Colombia",
