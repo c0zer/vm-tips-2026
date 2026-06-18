@@ -76,7 +76,9 @@ async function main() {
     if (result !== null) {
       groupMatches[`${homeEN}_${awayEN}`] = { result, goals: h + a };
     }
-    if (m.status === 'IN_PLAY' || m.status === 'PAUSED') {
+    // Only mark as live if status says so AND no fullTime score exists yet
+    const hasFullTime = m.score?.fullTime?.home != null;
+    if ((m.status === 'IN_PLAY' || m.status === 'PAUSED') && !hasFullTime) {
       liveMatches.push({
         home: homeEN,
         away: awayEN,
@@ -127,13 +129,16 @@ async function main() {
       if (stage === 'THIRD_PLACE') roundTeams.thirdPlace = winner;
     }
     if (m.status === 'IN_PLAY' || m.status === 'PAUSED') {
-      const score = m.score?.currentScore ?? m.score?.fullTime ?? {};
-      liveMatches.push({
-        home: homeEN,
-        away: awayEN,
-        score: `${score.home ?? 0}–${score.away ?? 0}`,
-        minute: m.minute ?? null,
-      });
+      const hasFullTime = m.score?.fullTime?.home != null;
+      if (!hasFullTime) {
+        const liveScore = m.score?.currentScore ?? m.score?.fullTime ?? {};
+        liveMatches.push({
+          home: homeEN,
+          away: awayEN,
+          score: `${liveScore.home ?? 0}–${liveScore.away ?? 0}`,
+          minute: m.minute ?? null,
+        });
+      }
     }
   }
   console.log(`  ${liveMatches.length} live matches`);
