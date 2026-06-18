@@ -1,13 +1,6 @@
 {
-  "updatedAt": "2026-06-18T01:01:04.132Z",
-  "liveMatches": [
-    {
-      "home": "Ghana",
-      "away": "Panama",
-      "score": "0–0",
-      "minute": null
-    }
-  ],
+  "updatedAt": "2026-06-18T01:10:45.131Z",
+  "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
       "result": "1",
@@ -98,8 +91,8 @@
       "goals": 6
     },
     "Ghana_Panama": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
