@@ -1,19 +1,6 @@
 {
-  "updatedAt": "2026-06-18T04:01:07.476Z",
-  "liveMatches": [
-    {
-      "home": "Ghana",
-      "away": "Panama",
-      "score": "1–0",
-      "minute": null
-    },
-    {
-      "home": "Uzbekistan",
-      "away": "Colombia",
-      "score": "1–2",
-      "minute": null
-    }
-  ],
+  "updatedAt": "2026-06-18T04:10:42.218Z",
+  "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
       "result": "1",
@@ -109,7 +96,7 @@
     },
     "Uzbekistan_Colombia": {
       "result": "2",
-      "goals": 3
+      "goals": 4
     }
   },
   "roundTeams": {
