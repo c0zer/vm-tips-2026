@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T16:01:49.660Z",
+  "updatedAt": "2026-06-18T16:10:49.840Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -9,6 +9,10 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
@@ -93,6 +97,10 @@
     "Uzbekistan_Colombia": {
       "result": "2",
       "goals": 4
+    },
+    "Czechia_South Africa": {
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -166,6 +174,7 @@
     "Daniel Muñoz": 1,
     "Abbosbek Fayzullaev": 1,
     "Luis Díaz": 1,
-    "Jaminton Campaz": 1
+    "Jaminton Campaz": 1,
+    "Michal Sadílek": 1
   }
 }
