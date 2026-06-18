@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T22:30:53.979Z",
+  "updatedAt": "2026-06-18T22:40:44.733Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -108,7 +108,7 @@
     },
     "Canada_Qatar": {
       "result": "1",
-      "goals": 1
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -188,6 +188,7 @@
     "Teboho Mokoena": 1,
     "Ruben Vargas": 1,
     "Ermin Mahmic": 1,
-    "Granit Xhaka": 1
+    "Granit Xhaka": 1,
+    "Jonathan David": 1
   }
 }
