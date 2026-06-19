@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T17:20:44.202Z",
+  "updatedAt": "2026-06-19T17:30:53.392Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -9,6 +9,10 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
