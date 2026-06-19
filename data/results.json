@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T19:10:41.789Z",
+  "updatedAt": "2026-06-19T19:20:46.739Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -115,8 +115,8 @@
       "goals": 1
     },
     "USA_Australia": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
