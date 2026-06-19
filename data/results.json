@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T22:01:09.202Z",
+  "updatedAt": "2026-06-19T22:10:45.265Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -117,6 +117,10 @@
     "USA_Australia": {
       "result": "1",
       "goals": 2
+    },
+    "Scotland_Morocco": {
+      "result": "2",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -133,6 +137,7 @@
     "Jonathan David": 3,
     "Cyle Larin": 2,
     "Folarin Balogun": 2,
+    "Ismael Saibari": 2,
     "Kai Havertz": 2,
     "Yasin Ayari": 2,
     "Elijah Just": 2,
@@ -150,7 +155,6 @@
     "Gio Reyna": 1,
     "Breel Embolo": 1,
     "Boualem Khoukhi": 1,
-    "Ismael Saibari": 1,
     "Vinicius Junior": 1,
     "John McGinn": 1,
     "Nestor Irankunda": 1,
