@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T23:50:47.639Z",
+  "updatedAt": "2026-06-19T00:01:13.329Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -108,7 +108,7 @@
     },
     "Canada_Qatar": {
       "result": "1",
-      "goals": 5
+      "goals": 6
     }
   },
   "roundTeams": {
@@ -122,6 +122,7 @@
   },
   "goalscorers": {
     "Lionel Messi": 3,
+    "Jonathan David": 3,
     "Cyle Larin": 2,
     "Folarin Balogun": 2,
     "Kai Havertz": 2,
@@ -131,7 +132,6 @@
     "Erling Haaland": 2,
     "Harry Kane": 2,
     "Johan Manzambi": 2,
-    "Jonathan David": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
