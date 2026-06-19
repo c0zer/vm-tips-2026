@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T02:10:42.147Z",
+  "updatedAt": "2026-06-19T02:20:42.216Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -111,8 +111,8 @@
       "goals": 6
     },
     "Mexico_Korea Republic": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -194,6 +194,7 @@
     "Ruben Vargas": 1,
     "Ermin Mahmic": 1,
     "Granit Xhaka": 1,
-    "Nathan-Dylan Saliba": 1
+    "Nathan-Dylan Saliba": 1,
+    "Luis Romo": 1
   }
 }
