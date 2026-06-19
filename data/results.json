@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T19:01:06.259Z",
+  "updatedAt": "2026-06-19T19:10:41.789Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -113,6 +113,10 @@
     "Mexico_Korea Republic": {
       "result": "1",
       "goals": 1
+    },
+    "USA_Australia": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
