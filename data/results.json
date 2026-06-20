@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T21:30:57.908Z",
+  "updatedAt": "2026-06-20T21:40:46.263Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -135,8 +135,8 @@
       "goals": 6
     },
     "Germany_Ivory Coast": {
-      "result": "2",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -156,6 +156,7 @@
     "Ismael Saibari": 2,
     "Vinicius Junior": 2,
     "Kai Havertz": 2,
+    "Deniz Undav": 2,
     "Yasin Ayari": 2,
     "Elijah Just": 2,
     "Kylian Mbappé": 2,
@@ -183,7 +184,6 @@
     "Nico Schlotterbeck": 1,
     "Jamal Musiala": 1,
     "Nathaniel Brown": 1,
-    "Deniz Undav": 1,
     "Virgil van Dijk": 1,
     "Keito Nakamura": 1,
     "Crysencio Summerville": 1,
