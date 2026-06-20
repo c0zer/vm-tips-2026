@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T18:50:45.460Z",
+  "updatedAt": "2026-06-20T19:01:11.208Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -9,6 +9,10 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
@@ -128,7 +132,7 @@
     },
     "Netherlands_Sweden": {
       "result": "1",
-      "goals": 5
+      "goals": 6
     }
   },
   "roundTeams": {
@@ -217,6 +221,7 @@
     "Luis Romo": 1,
     "Alex Freeman": 1,
     "Matías Galarza": 1,
-    "Anthony Elanga": 1
+    "Anthony Elanga": 1,
+    "Memphis Depay": 1
   }
 }
