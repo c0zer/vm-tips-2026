@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T00:30:55.310Z",
+  "updatedAt": "2026-06-20T00:40:43.473Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -121,6 +121,10 @@
     "Scotland_Morocco": {
       "result": "2",
       "goals": 1
+    },
+    "Brazil_Haiti": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
