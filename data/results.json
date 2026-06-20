@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T03:01:08.438Z",
+  "updatedAt": "2026-06-20T03:10:44.188Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -125,6 +125,10 @@
     "Brazil_Haiti": {
       "result": "1",
       "goals": 3
+    },
+    "Turkey_Paraguay": {
+      "result": "2",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -209,6 +213,7 @@
     "Granit Xhaka": 1,
     "Nathan-Dylan Saliba": 1,
     "Luis Romo": 1,
-    "Alex Freeman": 1
+    "Alex Freeman": 1,
+    "Matías Galarza": 1
   }
 }
