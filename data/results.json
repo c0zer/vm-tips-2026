@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T01:01:09.160Z",
+  "updatedAt": "2026-06-20T01:10:44.181Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -123,8 +123,8 @@
       "goals": 1
     },
     "Brazil_Haiti": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -149,6 +149,7 @@
     "Erling Haaland": 2,
     "Harry Kane": 2,
     "Johan Manzambi": 2,
+    "Matheus Cunha": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
@@ -208,7 +209,6 @@
     "Granit Xhaka": 1,
     "Nathan-Dylan Saliba": 1,
     "Luis Romo": 1,
-    "Alex Freeman": 1,
-    "Matheus Cunha": 1
+    "Alex Freeman": 1
   }
 }
