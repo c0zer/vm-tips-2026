@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T20:01:09.416Z",
+  "updatedAt": "2026-06-20T20:10:45.752Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -133,6 +133,10 @@
     "Netherlands_Sweden": {
       "result": "1",
       "goals": 6
+    },
+    "Germany_Ivory Coast": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
