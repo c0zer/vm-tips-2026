@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T18:10:47.094Z",
+  "updatedAt": "2026-06-20T18:20:48.562Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -132,7 +132,7 @@
     },
     "Netherlands_Sweden": {
       "result": "1",
-      "goals": 2
+      "goals": 4
     }
   },
   "roundTeams": {
@@ -160,6 +160,7 @@
     "Johan Manzambi": 2,
     "Matheus Cunha": 2,
     "Brian Brobbey": 2,
+    "Cody Gakpo": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
@@ -220,6 +221,6 @@
     "Luis Romo": 1,
     "Alex Freeman": 1,
     "Matías Galarza": 1,
-    "Cody Gakpo": 1
+    "Anthony Elanga": 1
   }
 }
