@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T17:01:14.111Z",
+  "updatedAt": "2026-06-20T17:10:49.102Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -129,6 +129,10 @@
     "Turkey_Paraguay": {
       "result": "2",
       "goals": 1
+    },
+    "Netherlands_Sweden": {
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -214,6 +218,7 @@
     "Nathan-Dylan Saliba": 1,
     "Luis Romo": 1,
     "Alex Freeman": 1,
-    "Matías Galarza": 1
+    "Matías Galarza": 1,
+    "Brian Brobbey": 1
   }
 }
