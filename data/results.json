@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T22:50:42.609Z",
+  "updatedAt": "2026-06-21T23:01:04.045Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -155,8 +155,8 @@
       "goals": 0
     },
     "Uruguay_Cape Verde": {
-      "result": "X",
-      "goals": 2
+      "result": "1",
+      "goals": 3
     }
   },
   "roundTeams": {
@@ -252,6 +252,7 @@
     "Franck Kessié": 1,
     "Junya Ito": 1,
     "Lamine Yamal": 1,
-    "Kevin Pina": 1
+    "Kevin Pina": 1,
+    "Agustín Canobbio": 1
   }
 }
