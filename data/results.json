@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T04:02:59.061Z",
+  "updatedAt": "2026-06-21T04:10:43.098Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -141,6 +141,10 @@
     "Ecuador_Curaçao": {
       "result": "X",
       "goals": 0
+    },
+    "Tunisia_Japan": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
@@ -161,6 +165,7 @@
     "Ismael Saibari": 2,
     "Vinicius Junior": 2,
     "Kai Havertz": 2,
+    "Daichi Kamada": 2,
     "Yasin Ayari": 2,
     "Elijah Just": 2,
     "Kylian Mbappé": 2,
@@ -191,7 +196,6 @@
     "Virgil van Dijk": 1,
     "Keito Nakamura": 1,
     "Crysencio Summerville": 1,
-    "Daichi Kamada": 1,
     "Amad Diallo": 1,
     "Alexander Isak": 1,
     "Omar Rekik": 1,
