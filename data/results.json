@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T16:10:44.110Z",
+  "updatedAt": "2026-06-21T16:20:41.502Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -147,8 +147,8 @@
       "goals": 4
     },
     "Spain_Saudi Arabia": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -241,6 +241,7 @@
     "Anthony Elanga": 1,
     "Memphis Depay": 1,
     "Franck Kessié": 1,
-    "Junya Ito": 1
+    "Junya Ito": 1,
+    "Lamine Yamal": 1
   }
 }
