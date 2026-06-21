@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T00:01:10.387Z",
+  "updatedAt": "2026-06-21T00:10:46.699Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -137,6 +137,10 @@
     "Germany_Ivory Coast": {
       "result": "1",
       "goals": 3
+    },
+    "Ecuador_Curaçao": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
