@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T04:10:43.098Z",
+  "updatedAt": "2026-06-21T04:20:42.681Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -143,8 +143,8 @@
       "goals": 0
     },
     "Tunisia_Japan": {
-      "result": "X",
-      "goals": 0
+      "result": "2",
+      "goals": 1
     }
   },
   "roundTeams": {
