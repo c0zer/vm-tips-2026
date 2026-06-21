@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T22:40:43.694Z",
+  "updatedAt": "2026-06-21T22:50:42.609Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -155,8 +155,8 @@
       "goals": 0
     },
     "Uruguay_Cape Verde": {
-      "result": "2",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -179,6 +179,7 @@
     "Kai Havertz": 2,
     "Daichi Kamada": 2,
     "Yasin Ayari": 2,
+    "Maximiliano Araújo": 2,
     "Elijah Just": 2,
     "Kylian Mbappé": 2,
     "Erling Haaland": 2,
@@ -217,7 +218,6 @@
     "Mattias Svanberg": 1,
     "Emam Ashour": 1,
     "Abdulelah Al Amri": 1,
-    "Maximiliano Araújo": 1,
     "Ramin Rezaeian": 1,
     "Mohammad Mohebi": 1,
     "Bradley Barcola": 1,
