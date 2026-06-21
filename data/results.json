@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T16:22:55.571Z",
+  "updatedAt": "2026-06-21T16:30:56.415Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -148,7 +148,7 @@
     },
     "Spain_Saudi Arabia": {
       "result": "1",
-      "goals": 1
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -180,6 +180,7 @@
     "Brian Brobbey": 2,
     "Cody Gakpo": 2,
     "Ayase Ueda": 2,
+    "Mikel Oyarzabal": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
