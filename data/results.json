@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T23:30:57.265Z",
+  "updatedAt": "2026-06-21T23:40:44.204Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -155,8 +155,8 @@
       "goals": 0
     },
     "Uruguay_Cape Verde": {
-      "result": "1",
-      "goals": 3
+      "result": "X",
+      "goals": 4
     }
   },
   "roundTeams": {
