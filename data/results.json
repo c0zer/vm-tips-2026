@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T04:30:56.982Z",
+  "updatedAt": "2026-06-21T04:40:45.335Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -144,7 +144,7 @@
     },
     "Tunisia_Japan": {
       "result": "2",
-      "goals": 1
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -235,6 +235,7 @@
     "Matías Galarza": 1,
     "Anthony Elanga": 1,
     "Memphis Depay": 1,
-    "Franck Kessié": 1
+    "Franck Kessié": 1,
+    "Ayase Ueda": 1
   }
 }
