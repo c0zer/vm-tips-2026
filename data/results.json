@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T05:40:44.010Z",
+  "updatedAt": "2026-06-21T05:50:13.973Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -9,10 +9,6 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
-    },
-    "Canada_Bosnia-H.": {
-      "result": "X",
-      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
@@ -175,6 +171,7 @@
     "Matheus Cunha": 2,
     "Brian Brobbey": 2,
     "Cody Gakpo": 2,
+    "Ayase Ueda": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
@@ -236,7 +233,6 @@
     "Anthony Elanga": 1,
     "Memphis Depay": 1,
     "Franck Kessié": 1,
-    "Ayase Ueda": 1,
     "Junya Ito": 1
   }
 }
