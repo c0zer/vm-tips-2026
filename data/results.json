@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T02:40:43.530Z",
+  "updatedAt": "2026-06-22T02:50:45.579Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -160,7 +160,7 @@
     },
     "New Zealand_Egypt": {
       "result": "2",
-      "goals": 3
+      "goals": 4
     }
   },
   "roundTeams": {
@@ -261,6 +261,7 @@
     "Hélio Varela": 1,
     "Finn Surman": 1,
     "Mostafa Ziko": 1,
-    "Mohamed Salah": 1
+    "Mohamed Salah": 1,
+    "Trezeguet": 1
   }
 }
