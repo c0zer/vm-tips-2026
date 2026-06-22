@@ -160,6 +160,11 @@ function calcGoalscorerScore(participant, goalscorers) {
           k.toLowerCase() === playerName.toLowerCase() ||
           stripAccents(k).toLowerCase() === normalizedTip
         )]
+      // Suffix fallback: "Salah" matches "Mohamed Salah"
+      ?? goalscorers[Object.keys(goalscorers).find(k => {
+          const kNorm = stripAccents(k).toLowerCase();
+          return kNorm.endsWith(' ' + normalizedTip) || normalizedTip.endsWith(' ' + kNorm);
+        })]
       ?? 0;
     if (goals > 0) {
       const credited = Math.min(listed, goals);
