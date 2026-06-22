@@ -293,9 +293,10 @@ function buildKnockoutSection(ko) {
 
   for (const [key, label] of Object.entries(ROUND_LABELS)) {
     for (const t of ko[key] ?? []) {
+      const dupBadge = t.duplicate ? ' <span class="badge-dup">Dubblett</span>' : '';
       rows += `<tr>
         <td class="muted" style="font-size:0.8rem">${label}</td>
-        <td class="${t.correct ? 'correct' : 'wrong'}">${escHtml(t.team)} ${t.correct ? '✓' : ''}</td>
+        <td class="${t.correct ? 'correct' : t.duplicate ? 'wrong' : 'wrong'}">${escHtml(t.team)}${dupBadge} ${t.correct ? '✓' : ''}</td>
         <td class="${t.pts > 0 ? 'pts' : 'pts-zero'}">${t.pts > 0 ? '+' + t.pts : '–'}</td>
       </tr>`;
       total += t.pts;

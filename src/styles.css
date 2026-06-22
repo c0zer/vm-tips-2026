@@ -276,6 +276,18 @@ footer {
 .modal-table td.muted { color: var(--muted); }
 .modal-table td.pts { font-weight: 600; color: var(--accent); text-align: right; }
 .modal-table td.pts-zero { color: var(--muted); text-align: right; }
+.badge-dup {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(234,179,8,0.2);
+  color: #ca8a04;
+  vertical-align: middle;
+  margin-left: 4px;
+  letter-spacing: 0.02em;
+}
 .modal-table td.correct { color: var(--green); }
 .modal-table td.wrong  { color: var(--muted); }
 

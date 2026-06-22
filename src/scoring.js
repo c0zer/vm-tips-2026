@@ -128,34 +128,64 @@ function calcKnockoutScore(participant, roundTeams, teamNames) {
     thirdPlace:  { tip: participant.thirdPlace ?? '', correct: false, pts: 0 },
   };
 
+  const seenSexton = new Set();
+  const awardedSexton = new Set();
   for (const pred of participant.sexton) {
-    const correct = sexton.includes(toEN(pred.team, teamNames));
-    if (correct) pts += 1;
-    breakdown.sexton.push({ team: pred.team, correct, pts: correct ? 1 : 0 });
+    const engTeam   = toEN(pred.team, teamNames);
+    const inResults = sexton.includes(engTeam);
+    const duplicate = seenSexton.has(engTeam);
+    const correct   = inResults && !duplicate;
+    if (correct) { pts += 1; awardedSexton.add(engTeam); }
+    seenSexton.add(engTeam);
+    breakdown.sexton.push({ team: pred.team, correct, pts: correct ? 1 : 0, duplicate });
   }
 
+  const seenAtton = new Set();
+  const awardedAtton = new Set();
   for (const pred of participant.atton) {
-    const correct = atton.includes(toEN(pred.team, teamNames));
-    if (correct) pts += 2;
-    breakdown.atton.push({ team: pred.team, correct, pts: correct ? 2 : 0 });
+    const engTeam   = toEN(pred.team, teamNames);
+    const inResults = atton.includes(engTeam);
+    const duplicate = seenAtton.has(engTeam);
+    const correct   = inResults && !duplicate;
+    if (correct) { pts += 2; awardedAtton.add(engTeam); }
+    seenAtton.add(engTeam);
+    breakdown.atton.push({ team: pred.team, correct, pts: correct ? 2 : 0, duplicate });
   }
 
+  const seenKvarts = new Set();
+  const awardedKvarts = new Set();
   for (const pred of participant.kvarts) {
-    const correct = kvarts.includes(toEN(pred.team, teamNames));
-    if (correct) pts += 3;
-    breakdown.kvarts.push({ team: pred.team, correct, pts: correct ? 3 : 0 });
+    const engTeam   = toEN(pred.team, teamNames);
+    const inResults = kvarts.includes(engTeam);
+    const duplicate = seenKvarts.has(engTeam);
+    const correct   = inResults && !duplicate;
+    if (correct) { pts += 3; awardedKvarts.add(engTeam); }
+    seenKvarts.add(engTeam);
+    breakdown.kvarts.push({ team: pred.team, correct, pts: correct ? 3 : 0, duplicate });
   }
 
+  const seenSemi = new Set();
+  const awardedSemi = new Set();
   for (const pred of participant.semi) {
-    const correct = semi.includes(toEN(pred.team, teamNames));
-    if (correct) pts += 5;
-    breakdown.semi.push({ team: pred.team, correct, pts: correct ? 5 : 0 });
+    const engTeam   = toEN(pred.team, teamNames);
+    const inResults = semi.includes(engTeam);
+    const duplicate = seenSemi.has(engTeam);
+    const correct   = inResults && !duplicate;
+    if (correct) { pts += 5; awardedSemi.add(engTeam); }
+    seenSemi.add(engTeam);
+    breakdown.semi.push({ team: pred.team, correct, pts: correct ? 5 : 0, duplicate });
   }
 
+  const seenFinal = new Set();
+  const awardedFinal = new Set();
   for (const team of participant.finalTeams) {
-    const correct = finalTeams.includes(toEN(team, teamNames));
-    if (correct) pts += 8;
-    breakdown.finalTeams.push({ team, correct, pts: correct ? 8 : 0 });
+    const engTeam   = toEN(team, teamNames);
+    const inResults = finalTeams.includes(engTeam);
+    const duplicate = seenFinal.has(engTeam);
+    const correct   = inResults && !duplicate;
+    if (correct) { pts += 8; awardedFinal.add(engTeam); }
+    seenFinal.add(engTeam);
+    breakdown.finalTeams.push({ team, correct, pts: correct ? 8 : 0, duplicate });
   }
 
   if (winner && toEN(participant.winner, teamNames) === winner) {
