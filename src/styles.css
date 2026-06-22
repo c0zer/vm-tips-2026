@@ -176,3 +176,100 @@ footer {
   background: var(--muted);
   animation: none;
 }
+
+/* ── Detail modal ──────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.modal-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+#modal-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  transition: color 0.15s;
+}
+#modal-close:hover { color: var(--text); }
+
+.modal-body {
+  padding: 1.2rem 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.modal-section h3 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+.modal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.modal-table th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-table td {
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid rgba(51,65,85,0.5);
+  color: var(--text);
+}
+.modal-table tr:last-child td { border-bottom: none; }
+.modal-table td.right { text-align: right; }
+.modal-table td.muted { color: var(--muted); }
+.modal-table td.pts { font-weight: 600; color: var(--accent); text-align: right; }
+.modal-table td.pts-zero { color: var(--muted); text-align: right; }
+.modal-table td.correct { color: var(--green); }
+.modal-table td.wrong  { color: var(--muted); }
+
+tbody tr:hover { cursor: pointer; }
+tbody tr.clickable { cursor: pointer; }
