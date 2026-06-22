@@ -179,15 +179,19 @@ footer {
 
 /* ── Detail modal ──────────────────────────────────────────── */
 .modal-overlay {
+  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.7);
   z-index: 100;
-  display: flex;
   align-items: flex-start;
   justify-content: center;
   padding: 2rem 1rem;
   overflow-y: auto;
+}
+
+.modal-overlay.is-open {
+  display: flex;
 }
 
 .modal-container {

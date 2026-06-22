@@ -78,13 +78,15 @@ function openDetailModal(scoreRow) {
   const modal = document.getElementById('detail-modal');
   document.getElementById('modal-title').textContent = `⚽ ${scoreRow.name}`;
   document.getElementById('modal-body').innerHTML = buildModalBody(scoreRow);
-  modal.hidden = false;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 
 function closeDetailModal() {
   const modal = document.getElementById('detail-modal');
-  modal.hidden = true;
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
