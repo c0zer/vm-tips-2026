@@ -33,6 +33,9 @@ header h1 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+header h1 .h1-text {
   background: linear-gradient(135deg, var(--accent), var(--gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -261,6 +264,7 @@ footer {
   padding: 0.3rem 0.5rem 0.5rem;
   border-bottom: 1px solid var(--border);
 }
+.modal-table th.right { text-align: right; }
 
 .modal-table td {
   padding: 0.45rem 0.5rem;
