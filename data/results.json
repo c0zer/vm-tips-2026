@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T21:21:24.033Z",
+  "updatedAt": "2026-06-22T21:30:59.884Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -167,8 +167,8 @@
       "goals": 2
     },
     "France_Iraq": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
