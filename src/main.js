@@ -7,25 +7,40 @@ import { loadResults } from './api.js';
 import { calcAllScores } from './scoring.js';
 
 const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
+const MONTH_NUM   = { juni: 5, juli: 6 };   // 0-indexed for Date()
+const MONTH_ORDER = { juni: 6, juli: 7 };   // for sort key
 
-let tipsData = null;
-let teamNames = null;
+let tipsData     = null;
+let teamNames    = null;
 let currentScores = [];
+let sortField    = 'totalt';
+let sortDir      = 1;    // 1 = desc (b-a), -1 = asc (a-b)
+let firstLoad    = true;
+
+// ── Static data ─────────────────────────────────────────────
 
 async function loadStaticData() {
   const [tipsRes, namesRes] = await Promise.all([
     fetch('./data/tips.json'),
     fetch('./data/team-names.json'),
   ]);
-  tipsData = await tipsRes.json();
-  teamNames = await namesRes.json();
+  tipsData   = await tipsRes.json();
+  teamNames  = await namesRes.json();
 }
+
+// ── Utilities ────────────────────────────────────────────────
 
 function setStatus(msg, isError = false) {
   const el = document.getElementById('status');
   el.textContent = msg;
   el.className = isError ? 'status error' : 'status';
 }
+
+function escHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// ── Live banner ──────────────────────────────────────────────
 
 function renderLiveBanner(liveMatches) {
   let banner = document.getElementById('live-banner');
@@ -46,10 +61,18 @@ function renderLiveBanner(liveMatches) {
   banner.innerHTML = `<span class="live-dot"></span><strong>LIVE</strong> – Pågående match(er): ${matchList} · Poängen kan fluktuera`;
 }
 
-function renderTable(scores) {
-  const tbody = document.querySelector('#leaderboard tbody');
+// ── Leaderboard table ────────────────────────────────────────
+
+function getSortedScores() {
+  return [...currentScores].sort((a, b) => sortDir * ((b[sortField] ?? 0) - (a[sortField] ?? 0)));
+}
+
+function renderTable() {
+  const sorted = getSortedScores();
+  const tbody  = document.querySelector('#leaderboard tbody');
   tbody.innerHTML = '';
-  scores.forEach((row, i) => {
+
+  sorted.forEach((row, i) => {
     const tr = document.createElement('tr');
     tr.classList.add('clickable');
     if (i === 0) tr.classList.add('rank-1');
@@ -58,29 +81,113 @@ function renderTable(scores) {
     tr.innerHTML = `
       <td class="rank">${i + 1}</td>
       <td class="name">${escHtml(row.name)}</td>
-      <td class="num bold">${row.totalt}</td>
-      <td class="num">${row.krysset}</td>
-      <td class="num">${row.antalMal}</td>
-      <td class="num">${row.malskyttar}</td>
+      <td class="num bold count-up">${row.totalt}</td>
+      <td class="num hide-mobile count-up">${row.krysset}</td>
+      <td class="num hide-mobile count-up">${row.antalMal}</td>
+      <td class="num count-up">${row.malskyttar}</td>
     `;
     tr.addEventListener('click', () => openDetailModal(row));
     tbody.appendChild(tr);
   });
+
+  // Update sort arrow indicators
+  document.querySelectorAll('#leaderboard thead th[data-sort]').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.sort === sortField) {
+      th.classList.add(sortDir === 1 ? 'sort-desc' : 'sort-asc');
+    }
+  });
 }
 
-function escHtml(str) {
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+function initSortHandlers() {
+  document.querySelectorAll('#leaderboard thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const field = th.dataset.sort;
+      if (sortField === field) {
+        sortDir *= -1;
+      } else {
+        sortField = field;
+        sortDir   = 1;   // start descending on new column
+      }
+      renderTable();
+    });
+  });
 }
 
-// ── Detail modal ────────────────────────────────────────────
+// ── Count-up animation ────────────────────────────────────────
+
+function animateCountUp() {
+  const cells = document.querySelectorAll('#leaderboard .count-up');
+  const DURATION = 700;
+  const start = performance.now();
+  const targets = Array.from(cells).map(c => parseInt(c.textContent, 10) || 0);
+
+  function step(now) {
+    const t = Math.min((now - start) / DURATION, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    cells.forEach((c, i) => { c.textContent = Math.round(ease * targets[i]); });
+    if (t < 1) requestAnimationFrame(step);
+    else cells.forEach((c, i) => { c.textContent = targets[i]; });
+  }
+  requestAnimationFrame(step);
+}
+
+// ── Upcoming matches ─────────────────────────────────────────
+
+function parseMatchDate(label) {
+  const m = label.match(/^(\d+)\s+(\w+),\s+([\d.]+)/);
+  if (!m) return null;
+  const parts = m[3].split('.').map(Number);
+  return new Date(2026, MONTH_NUM[m[2]] ?? 5, parseInt(m[1], 10), parts[0], parts[1] ?? 0);
+}
+
+function parseMatchTeams(label) {
+  const m = label.match(/[\d.]+ \w+, [\d.]+\s+(.+?)\s*-\s*(.+?)\s*\(([A-L])\)/);
+  return m ? { home: m[1].trim(), away: m[2].trim(), group: m[3] } : null;
+}
+
+function renderUpcoming() {
+  const container = document.getElementById('upcoming');
+  if (!container || !tipsData?.matchList) return;
+
+  const now = new Date();
+  const upcoming = tipsData.matchList
+    .map(label => ({ date: parseMatchDate(label), teams: parseMatchTeams(label) }))
+    .filter(m => m.date && m.date > now && m.teams)
+    .sort((a, b) => a.date - b.date)
+    .slice(0, 5);
+
+  if (upcoming.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const MO = ['jan','feb','mar','apr','maj','jun','jul','aug','sep','okt','nov','dec'];
+  const items = upcoming.map(m => {
+    const time = m.date.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' });
+    return `<div class="upcoming-match">
+      <span class="upcoming-date">${m.date.getDate()} ${MO[m.date.getMonth()]} ${time}</span>
+      <span class="upcoming-teams">${escHtml(m.teams.home)} – ${escHtml(m.teams.away)}</span>
+      <span class="upcoming-group">Grupp ${m.teams.group}</span>
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `<h3 class="upcoming-title">Kommande matcher</h3><div class="upcoming-list">${items}</div>`;
+}
+
+// ── Detail modal ─────────────────────────────────────────────
 
 function openDetailModal(scoreRow) {
   const modal = document.getElementById('detail-modal');
   document.getElementById('modal-title').textContent = `⚽ ${scoreRow.name}`;
-  document.getElementById('modal-body').innerHTML = buildModalBody(scoreRow);
+  document.getElementById('modal-body').innerHTML   = buildModalBody(scoreRow);
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+
+  const params = new URLSearchParams(window.location.search);
+  params.set('player', scoreRow.sheetName);
+  history.pushState({}, '', `?${params}`);
 }
 
 function closeDetailModal() {
@@ -88,6 +195,11 @@ function closeDetailModal() {
   modal.classList.remove('is-open');
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+
+  const params = new URLSearchParams(window.location.search);
+  params.delete('player');
+  const qs = params.toString();
+  history.pushState({}, '', qs ? `?${qs}` : window.location.pathname);
 }
 
 function buildModalBody(row) {
@@ -96,18 +208,25 @@ function buildModalBody(row) {
     buildGroupSection(breakdown.groupMatches),
     buildKnockoutSection(breakdown.knockout),
     buildGoalscorerSection(breakdown.goalscorers),
+    buildStatsSection(row),
   ].join('');
 }
 
-const MONTH_ORDER = { juni: 6, juli: 7 };
+// ── Group matches section ─────────────────────────────────────
 
-function matchSortKey(matchLabel) {
-  const m = matchLabel.match(/^(\d+)\s+(\w+),\s+([\d.]+)/);
+function matchSortKey(label) {
+  const m = label.match(/^(\d+)\s+(\w+),\s+([\d.]+)/);
   if (!m) return 0;
-  const day = parseInt(m[1], 10);
-  const month = MONTH_ORDER[m[2]] ?? 0;
-  const time = parseFloat(m[3].replace(',', '.'));
-  return month * 10000 + day * 100 + time;
+  return (MONTH_ORDER[m[2]] ?? 0) * 10000 + parseInt(m[1], 10) * 100 + parseFloat(m[3]);
+}
+
+function parseMatchDisplay(label) {
+  const m = label.match(/^(\d+)\s+(\w+),\s+([\d.]+)\s+(.+?)\s*-\s*(.+?)\s*\([A-L]\)/);
+  if (!m) return { dateStr: label, matchStr: '' };
+  return {
+    dateStr:  `${m[1]} ${m[2]} ${m[3].replace('.', ':')}`,
+    matchStr: `${m[4].trim()} – ${m[5].trim()}`,
+  };
 }
 
 function buildGroupSection(matches) {
@@ -119,19 +238,20 @@ function buildGroupSection(matches) {
   if (played.length === 0) return '';
 
   const rows = played.map(m => {
-    const tipOk = m.tip && m.tip === m.actualResult;
-    const goalOk = m.goalsTipped !== null && m.actualGoals !== null && m.goalsTipped === m.actualGoals;
+    const tipOk   = m.tip && m.tip === m.actualResult;
+    const goalOk  = m.goalsTipped !== null && m.actualGoals !== null && m.goalsTipped === m.actualGoals;
     const totalPts = m.pts1x2 + m.ptsGoals;
-    const ptsClass = totalPts > 0 ? 'pts' : 'pts-zero';
-    const tipClass = tipOk ? 'correct' : 'wrong';
-    const goalClass = goalOk ? 'correct' : 'wrong';
+    const { dateStr, matchStr } = parseMatchDisplay(m.match);
     return `<tr>
-      <td class="muted" style="font-size:0.8rem">${escHtml(m.match.replace('_', ' – '))}</td>
-      <td class="${tipClass}">${m.tip ?? '–'} ${tipOk ? '✓' : ''}</td>
+      <td>
+        <div class="match-name">${escHtml(matchStr)}</div>
+        <div class="match-date">${escHtml(dateStr)}</div>
+      </td>
+      <td class="${tipOk ? 'correct' : 'wrong'}">${m.tip ?? '–'} ${tipOk ? '✓' : ''}</td>
       <td class="muted">${m.actualResult}</td>
-      <td class="${goalClass}">${m.goalsTipped ?? '–'} ${goalOk ? '✓' : ''}</td>
+      <td class="${goalOk ? 'correct' : 'wrong'}">${m.goalsTipped ?? '–'} ${goalOk ? '✓' : ''}</td>
       <td class="muted">${m.actualGoals}</td>
-      <td class="${ptsClass}">${totalPts > 0 ? '+' + totalPts : '–'}</td>
+      <td class="${totalPts > 0 ? 'pts' : 'pts-zero'}">${totalPts > 0 ? '+' + totalPts : '–'}</td>
     </tr>`;
   }).join('');
 
@@ -145,64 +265,54 @@ function buildGroupSection(matches) {
       </tr></thead>
       <tbody>${rows}</tbody>
       <tfoot><tr>
-        <td colspan="5" style="padding:0.5rem 0.5rem 0;color:var(--muted);font-size:0.8rem">Totalt</td>
-        <td class="pts" style="padding:0.5rem 0.5rem 0">+${total}</td>
+        <td colspan="5" class="tfoot-label">Totalt</td>
+        <td class="pts tfoot-pts">+${total}</td>
       </tr></tfoot>
     </table>
   </div>`;
 }
 
+// ── Knockout section ──────────────────────────────────────────
+
 const ROUND_LABELS = {
-  sexton:     { label: 'Sexton­delsfinaler',  pts: 1  },
-  atton:      { label: 'Åttondels­finaler',   pts: 2  },
-  kvarts:     { label: 'Kvarts­finaler',       pts: 3  },
-  semi:       { label: 'Semi­finaler',         pts: 5  },
-  finalTeams: { label: 'Finalister',           pts: 8  },
+  sexton:     'Sextondelsfinal',
+  atton:      'Åttondelsfinal',
+  kvarts:     'Kvartsfinal',
+  semi:       'Semifinal',
+  finalTeams: 'Finalist',
 };
 
 function buildKnockoutSection(ko) {
   if (!ko) return '';
-
-  const hasAnyData = ['sexton','atton','kvarts','semi','finalTeams'].some(k => (ko[k]?.length ?? 0) > 0)
+  const hasData = ['sexton','atton','kvarts','semi','finalTeams'].some(k => (ko[k]?.length ?? 0) > 0)
     || ko.winner?.tip || ko.thirdPlace?.tip;
-  if (!hasAnyData) return '';
+  if (!hasData) return '';
 
   let rows = '';
   let total = 0;
 
-  for (const [key, { label, pts }] of Object.entries(ROUND_LABELS)) {
-    const teams = ko[key] ?? [];
-    if (teams.length === 0) continue;
-    for (const t of teams) {
-      const cls = t.correct ? 'correct' : 'wrong';
-      const ptsClass = t.pts > 0 ? 'pts' : 'pts-zero';
+  for (const [key, label] of Object.entries(ROUND_LABELS)) {
+    for (const t of ko[key] ?? []) {
       rows += `<tr>
         <td class="muted" style="font-size:0.8rem">${label}</td>
-        <td class="${cls}">${escHtml(t.team)} ${t.correct ? '✓' : ''}</td>
-        <td class="${ptsClass}">${t.pts > 0 ? '+' + t.pts : '–'}</td>
+        <td class="${t.correct ? 'correct' : 'wrong'}">${escHtml(t.team)} ${t.correct ? '✓' : ''}</td>
+        <td class="${t.pts > 0 ? 'pts' : 'pts-zero'}">${t.pts > 0 ? '+' + t.pts : '–'}</td>
       </tr>`;
       total += t.pts;
     }
   }
 
-  if (ko.winner?.tip) {
-    const w = ko.winner;
+  for (const [entry, label, maxPts] of [
+    [ko.winner, 'Slutsegrare (16p)', 16],
+    [ko.thirdPlace, 'Tredjeplats (4p)', 4],
+  ]) {
+    if (!entry?.tip) continue;
     rows += `<tr>
-      <td class="muted" style="font-size:0.8rem">Slutsegrare (16p)</td>
-      <td class="${w.correct ? 'correct' : 'wrong'}">${escHtml(w.tip)} ${w.correct ? '✓' : ''}</td>
-      <td class="${w.pts > 0 ? 'pts' : 'pts-zero'}">${w.pts > 0 ? '+' + w.pts : '–'}</td>
+      <td class="muted" style="font-size:0.8rem">${label}</td>
+      <td class="${entry.correct ? 'correct' : 'wrong'}">${escHtml(entry.tip)} ${entry.correct ? '✓' : ''}</td>
+      <td class="${entry.pts > 0 ? 'pts' : 'pts-zero'}">${entry.pts > 0 ? '+' + entry.pts : '–'}</td>
     </tr>`;
-    total += w.pts;
-  }
-
-  if (ko.thirdPlace?.tip) {
-    const t = ko.thirdPlace;
-    rows += `<tr>
-      <td class="muted" style="font-size:0.8rem">Tredjeplats (4p)</td>
-      <td class="${t.correct ? 'correct' : 'wrong'}">${escHtml(t.tip)} ${t.correct ? '✓' : ''}</td>
-      <td class="${t.pts > 0 ? 'pts' : 'pts-zero'}">${t.pts > 0 ? '+' + t.pts : '–'}</td>
-    </tr>`;
-    total += t.pts;
+    total += entry.pts;
   }
 
   return `<div class="modal-section">
@@ -211,26 +321,24 @@ function buildKnockoutSection(ko) {
       <thead><tr><th>Runda</th><th>Lag</th><th class="right">Poäng</th></tr></thead>
       <tbody>${rows}</tbody>
       <tfoot><tr>
-        <td colspan="2" style="padding:0.5rem 0.5rem 0;color:var(--muted);font-size:0.8rem">Totalt</td>
-        <td class="pts" style="padding:0.5rem 0.5rem 0">+${total}</td>
+        <td colspan="2" class="tfoot-label">Totalt</td>
+        <td class="pts tfoot-pts">+${total}</td>
       </tr></tfoot>
     </table>
   </div>`;
 }
 
+// ── Goalscorer section ────────────────────────────────────────
+
 function buildGoalscorerSection(scorers) {
   if (!scorers || scorers.length === 0) return '';
 
-  const rows = scorers.map(s => {
-    const ptsClass = s.pts > 0 ? 'pts' : 'pts-zero';
-    const nameClass = s.pts > 0 ? 'correct' : (s.goals > 0 ? 'muted' : 'wrong');
-    return `<tr>
-      <td class="${nameClass}">${escHtml(s.name)} ${s.pts > 0 ? '✓' : ''}</td>
-      <td class="right muted">${s.listed}</td>
-      <td class="right muted">${s.goals}</td>
-      <td class="${ptsClass}">${s.pts > 0 ? '+' + s.pts : '–'}</td>
-    </tr>`;
-  }).join('');
+  const rows = scorers.map(s => `<tr>
+    <td class="${s.pts > 0 ? 'correct' : s.goals > 0 ? 'muted' : 'wrong'}">${escHtml(s.name)} ${s.pts > 0 ? '✓' : ''}</td>
+    <td class="right muted">${s.listed}</td>
+    <td class="right muted">${s.goals}</td>
+    <td class="${s.pts > 0 ? 'pts' : 'pts-zero'}">${s.pts > 0 ? '+' + s.pts : '–'}</td>
+  </tr>`).join('');
 
   const total = scorers.reduce((s, p) => s + p.pts, 0);
   return `<div class="modal-section">
@@ -244,14 +352,58 @@ function buildGoalscorerSection(scorers) {
       </tr></thead>
       <tbody>${rows}</tbody>
       <tfoot><tr>
-        <td colspan="3" style="padding:0.5rem 0.5rem 0;color:var(--muted);font-size:0.8rem">Totalt</td>
-        <td class="pts" style="padding:0.5rem 0.5rem 0">+${total}</td>
+        <td colspan="3" class="tfoot-label">Totalt</td>
+        <td class="pts tfoot-pts">+${total}</td>
       </tr></tfoot>
     </table>
   </div>`;
 }
 
-// ── Refresh & init ──────────────────────────────────────────
+// ── Stats section ─────────────────────────────────────────────
+
+function buildStatsSection(row) {
+  const played = row.breakdown.groupMatches.filter(m => m.actualResult != null);
+  if (played.length === 0) return '';
+
+  const tipped1x2   = played.filter(m => m.tip).length;
+  const correct1x2  = played.filter(m => m.pts1x2 > 0).length;
+  const tippedGoals = played.filter(m => m.goalsTipped != null).length;
+  const correctGoals = played.filter(m => m.ptsGoals > 0).length;
+  const pct1x2   = tipped1x2   > 0 ? Math.round(100 * correct1x2   / tipped1x2)   : 0;
+  const pctGoals = tippedGoals > 0 ? Math.round(100 * correctGoals / tippedGoals) : 0;
+
+  const bestMatch = played
+    .map(m => ({ ...parseMatchDisplay(m.match), pts: m.pts1x2 + m.ptsGoals }))
+    .sort((a, b) => b.pts - a.pts)[0];
+
+  const bestScorer = [...row.breakdown.goalscorers]
+    .filter(s => s.pts > 0)
+    .sort((a, b) => b.pts - a.pts)[0];
+
+  return `<div class="modal-section">
+    <h3>Statistik</h3>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">${pct1x2}%</div>
+        <div class="stat-label">Rätt 1/X/2<br><span class="stat-sub">${correct1x2} av ${tipped1x2} matcher</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${pctGoals}%</div>
+        <div class="stat-label">Rätt antal mål<br><span class="stat-sub">${correctGoals} av ${tippedGoals} matcher</span></div>
+      </div>
+      ${bestMatch?.pts > 0 ? `<div class="stat-card">
+        <div class="stat-value">+${bestMatch.pts}p</div>
+        <div class="stat-label">Bästa match<br><span class="stat-sub">${escHtml(bestMatch.matchStr)}</span></div>
+      </div>` : ''}
+      ${bestScorer ? `<div class="stat-card">
+        <div class="stat-value">+${bestScorer.pts}p</div>
+        <div class="stat-label">Bästa målskytt<br><span class="stat-sub">${escHtml(bestScorer.name)}</span></div>
+      </div>` : ''}
+    </div>
+  </div>`;
+}
+
+// ── Refresh & init ────────────────────────────────────────────
 
 async function refresh() {
   setStatus('Laddar resultat…');
@@ -262,7 +414,8 @@ async function refresh() {
     currentScores = calcAllScores(
       tipsData.participants, matchResults, roundTeams, goalscorers, teamNames
     );
-    renderTable(currentScores);
+    renderTable();
+    renderUpcoming();
     renderLiveBanner(liveMatches);
     setStatus('');
     if (updatedAt) {
@@ -272,6 +425,15 @@ async function refresh() {
     } else {
       document.getElementById('last-updated').textContent = '';
     }
+    if (firstLoad) {
+      firstLoad = false;
+      animateCountUp();
+      const player = new URLSearchParams(window.location.search).get('player');
+      if (player) {
+        const scoreRow = currentScores.find(s => s.sheetName === player);
+        if (scoreRow) openDetailModal(scoreRow);
+      }
+    }
   } catch (err) {
     console.error(err);
     setStatus('Fel: ' + err.message, true);
@@ -279,7 +441,8 @@ async function refresh() {
 }
 
 async function init() {
-  // Modal close handlers
+  initSortHandlers();
+
   document.getElementById('modal-close').addEventListener('click', closeDetailModal);
   document.getElementById('detail-modal').addEventListener('click', e => {
     if (e.target === e.currentTarget) closeDetailModal();
@@ -299,3 +462,4 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
