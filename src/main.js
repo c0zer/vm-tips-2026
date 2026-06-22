@@ -99,10 +99,23 @@ function buildModalBody(row) {
   ].join('');
 }
 
+const MONTH_ORDER = { juni: 6, juli: 7 };
+
+function matchSortKey(matchLabel) {
+  const m = matchLabel.match(/^(\d+)\s+(\w+),\s+([\d.]+)/);
+  if (!m) return 0;
+  const day = parseInt(m[1], 10);
+  const month = MONTH_ORDER[m[2]] ?? 0;
+  const time = parseFloat(m[3].replace(',', '.'));
+  return month * 10000 + day * 100 + time;
+}
+
 function buildGroupSection(matches) {
   if (!matches || matches.length === 0) return '';
 
-  const played = matches.filter(m => m.actualResult != null);
+  const played = matches
+    .filter(m => m.actualResult != null)
+    .sort((a, b) => matchSortKey(a.match) - matchSortKey(b.match));
   if (played.length === 0) return '';
 
   const rows = played.map(m => {
