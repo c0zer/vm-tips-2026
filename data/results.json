@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T17:40:44.280Z",
+  "updatedAt": "2026-06-22T17:50:48.075Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -163,8 +163,8 @@
       "goals": 4
     },
     "Argentina_Austria": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
