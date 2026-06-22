@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T01:10:47.119Z",
+  "updatedAt": "2026-06-22T01:20:43.996Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -157,10 +157,6 @@
     "Uruguay_Cape Verde": {
       "result": "X",
       "goals": 4
-    },
-    "New Zealand_Egypt": {
-      "result": "X",
-      "goals": 0
     }
   },
   "roundTeams": {
@@ -258,6 +254,7 @@
     "Lamine Yamal": 1,
     "Kevin Pina": 1,
     "Agustín Canobbio": 1,
-    "Hélio Varela": 1
+    "Hélio Varela": 1,
+    "Finn Surman": 1
   }
 }
