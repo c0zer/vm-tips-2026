@@ -14,7 +14,7 @@ let tipsData     = null;
 let teamNames    = null;
 let currentScores = [];
 let sortField    = 'totalt';
-let sortDir      = -1;   // -1 = desc, 1 = asc
+let sortDir      = 1;    // 1 = desc (b-a), -1 = asc (a-b)
 let firstLoad    = true;
 
 // ── Static data ─────────────────────────────────────────────
@@ -94,7 +94,7 @@ function renderTable() {
   document.querySelectorAll('#leaderboard thead th[data-sort]').forEach(th => {
     th.classList.remove('sort-asc', 'sort-desc');
     if (th.dataset.sort === sortField) {
-      th.classList.add(sortDir === -1 ? 'sort-desc' : 'sort-asc');
+      th.classList.add(sortDir === 1 ? 'sort-desc' : 'sort-asc');
     }
   });
 }
@@ -107,7 +107,7 @@ function initSortHandlers() {
         sortDir *= -1;
       } else {
         sortField = field;
-        sortDir   = -1;
+        sortDir   = 1;   // start descending on new column
       }
       renderTable();
     });
@@ -154,6 +154,7 @@ function renderUpcoming() {
   const upcoming = tipsData.matchList
     .map(label => ({ date: parseMatchDate(label), teams: parseMatchTeams(label) }))
     .filter(m => m.date && m.date > now && m.teams)
+    .sort((a, b) => a.date - b.date)
     .slice(0, 5);
 
   if (upcoming.length === 0) {
