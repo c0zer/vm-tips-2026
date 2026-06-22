@@ -279,5 +279,95 @@ footer {
 .modal-table td.correct { color: var(--green); }
 .modal-table td.wrong  { color: var(--muted); }
 
+.tfoot-label { padding: 0.5rem 0.5rem 0; color: var(--muted); font-size: 0.8rem; }
+.tfoot-pts   { padding: 0.5rem 0.5rem 0; font-weight: 600; color: var(--accent); text-align: right; }
+
+/* Match name display */
+.match-name { font-size: 0.85rem; color: var(--text); }
+.match-date { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+.stat-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+.stat-sub { font-size: 0.72rem; color: var(--muted); }
+
+/* Sortable column headers */
+thead th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+thead th.sortable:hover { color: var(--text); }
+thead th.sort-desc::after { content: ' ↓'; color: var(--accent); }
+thead th.sort-asc::after  { content: ' ↑'; color: var(--accent); }
+
+/* Upcoming matches */
+.upcoming-section {
+  max-width: 700px;
+  margin: 1.2rem auto 0;
+}
+.upcoming-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.upcoming-match {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+}
+.upcoming-date  { color: var(--muted); font-size: 0.78rem; min-width: 100px; }
+.upcoming-teams { color: var(--text); font-weight: 500; flex: 1; }
+.upcoming-group { color: var(--muted); font-size: 0.75rem; }
+
+/* Modal animation */
+.modal-overlay { transition: opacity 0.18s ease; opacity: 0; }
+.modal-overlay.is-open { opacity: 1; }
+.modal-container { transform: translateY(-12px); transition: transform 0.18s ease; }
+.modal-overlay.is-open .modal-container { transform: translateY(0); }
+
+/* Mobile responsive */
+@media (max-width: 580px) {
+  .hide-mobile { display: none; }
+  body { padding: 1rem 0.75rem; }
+  .modal-container { border-radius: 10px; }
+  .modal-header { padding: 1rem 1rem 0.8rem; }
+  .modal-body { padding: 1rem 1rem 1.4rem; gap: 1.4rem; }
+  .upcoming-match { flex-wrap: wrap; gap: 0.3rem; }
+  .upcoming-date { min-width: unset; }
+}
+
 tbody tr:hover { cursor: pointer; }
 tbody tr.clickable { cursor: pointer; }

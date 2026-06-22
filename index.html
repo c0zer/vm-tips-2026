@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VM Tips 2026 – Live Poängtavla</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./src/styles.css" />
@@ -26,10 +27,10 @@
         <tr>
           <th>#</th>
           <th>Namn</th>
-          <th class="num">Totalt</th>
-          <th class="num">Krysset</th>
-          <th class="num">Antal mål</th>
-          <th class="num">Målskyttar</th>
+          <th class="num sortable" data-sort="totalt">Totalt</th>
+          <th class="num sortable hide-mobile" data-sort="krysset">Krysset</th>
+          <th class="num sortable hide-mobile" data-sort="antalMal">Antal mål</th>
+          <th class="num sortable" data-sort="malskyttar">Målskyttar</th>
         </tr>
       </thead>
       <tbody>
@@ -37,6 +38,8 @@
       </tbody>
     </table>
   </div>
+
+  <div id="upcoming" class="upcoming-section"></div>
 
   <footer>
     Resultaten uppdateras var 10:e minut via GitHub Actions &bull; Data via football-data.org
