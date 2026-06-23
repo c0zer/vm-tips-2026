@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T00:40:45.051Z",
+  "updatedAt": "2026-06-23T00:50:43.662Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -171,8 +171,8 @@
       "goals": 3
     },
     "Norway_Senegal": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -275,6 +275,7 @@
     "Mostafa Ziko": 1,
     "Mohamed Salah": 1,
     "Trezeguet": 1,
-    "Ousmane Dembélé": 1
+    "Ousmane Dembélé": 1,
+    "Marcus Pedersen": 1
   }
 }
