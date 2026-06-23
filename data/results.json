@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T03:01:09.612Z",
+  "updatedAt": "2026-06-23T03:10:48.131Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -173,6 +173,10 @@
     "Norway_Senegal": {
       "result": "1",
       "goals": 5
+    },
+    "Jordan_Algeria": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
