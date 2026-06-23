@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T00:20:42.722Z",
+  "updatedAt": "2026-06-23T00:30:54.335Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -168,7 +168,7 @@
     },
     "France_Iraq": {
       "result": "1",
-      "goals": 2
+      "goals": 3
     },
     "Norway_Senegal": {
       "result": "X",
@@ -274,6 +274,7 @@
     "Finn Surman": 1,
     "Mostafa Ziko": 1,
     "Mohamed Salah": 1,
-    "Trezeguet": 1
+    "Trezeguet": 1,
+    "Ousmane Dembélé": 1
   }
 }
