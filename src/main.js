@@ -10,8 +10,9 @@ const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
 const MONTH_NUM   = { juni: 5, juli: 6 };   // 0-indexed for Date()
 const MONTH_ORDER = { juni: 6, juli: 7 };   // for sort key
 
-let tipsData     = null;
-let teamNames    = null;
+let tipsData      = null;
+let teamNames     = null;
+let playerAliases = {};
 let currentScores = [];
 let sortField    = 'totalt';
 let sortDir      = 1;    // 1 = desc (b-a), -1 = asc (a-b)
@@ -20,12 +21,14 @@ let firstLoad    = true;
 // ── Static data ─────────────────────────────────────────────
 
 async function loadStaticData() {
-  const [tipsRes, namesRes] = await Promise.all([
+  const [tipsRes, namesRes, aliasRes] = await Promise.all([
     fetch('./data/tips.json'),
     fetch('./data/team-names.json'),
+    fetch('./data/player-aliases.json'),
   ]);
-  tipsData   = await tipsRes.json();
-  teamNames  = await namesRes.json();
+  tipsData      = await tipsRes.json();
+  teamNames     = await namesRes.json();
+  playerAliases = await aliasRes.json();
 }
 
 // ── Utilities ────────────────────────────────────────────────
@@ -413,7 +416,7 @@ async function refresh() {
       tipsData.matchList, teamNames
     );
     currentScores = calcAllScores(
-      tipsData.participants, matchResults, roundTeams, goalscorers, teamNames
+      tipsData.participants, matchResults, roundTeams, goalscorers, teamNames, playerAliases
     );
     renderTable();
     renderUpcoming();

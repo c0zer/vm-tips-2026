@@ -205,10 +205,12 @@ function calcKnockoutScore(participant, roundTeams, teamNames) {
  * Calculate goalscorer points for a participant.
  * Returns { pts, breakdown: [{ name, listed, goals, pts }] }
  */
-function calcGoalscorerScore(participant, goalscorers) {
+function calcGoalscorerScore(participant, goalscorers, playerAliases = {}) {
   const appearances = {};
   for (const name of participant.goalscorers) {
-    appearances[name] = (appearances[name] || 0) + 1;
+    // Resolve alias first (e.g. "Raphina" → "Raphinha")
+    const resolved = playerAliases[name] ?? name;
+    appearances[resolved] = (appearances[resolved] || 0) + 1;
   }
 
   let pts = 0;
@@ -249,16 +251,17 @@ function calcGoalscorerScore(participant, goalscorers) {
  * @param {Object} roundTeams    - { sexton, atton, kvarts, semi, final, winner, thirdPlace }
  * @param {Object} goalscorers   - { playerName: goalCount }
  * @param {Object} teamNames     - { "Mexiko": "Mexico", ... }
+ * @param {Object} playerAliases - { "Raphina": "Raphinha", ... }
  * @returns {Array} sorted leaderboard entries
  */
-export function calcAllScores(participants, matchResults, roundTeams, goalscorers, teamNames) {
+export function calcAllScores(participants, matchResults, roundTeams, goalscorers, teamNames, playerAliases = {}) {
   const groupScores = calcGroupMatchScores(participants, matchResults);
 
   return participants
     .map(p => {
       const gs = groupScores[p.sheetName] ?? { krysset: 0, antalMal: 0, details: [] };
       const ko = calcKnockoutScore(p, roundTeams, teamNames);
-      const scorer = calcGoalscorerScore(p, goalscorers);
+      const scorer = calcGoalscorerScore(p, goalscorers, playerAliases);
       return {
         name: p.name,
         sheetName: p.sheetName,
