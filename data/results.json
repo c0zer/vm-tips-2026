@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T17:10:48.933Z",
+  "updatedAt": "2026-06-23T17:20:48.592Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -179,8 +179,8 @@
       "goals": 3
     },
     "Portugal_Uzbekistan": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -288,6 +288,7 @@
     "Nizar Al Rashdan": 1,
     "Nadhir Benbouali": 1,
     "Amine Gouiri": 1,
-    "Cristiano Ronaldo": 1
+    "Cristiano Ronaldo": 1,
+    "Nuno Mendes": 1
   }
 }
