@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T17:01:23.153Z",
+  "updatedAt": "2026-06-23T17:10:48.933Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -177,6 +177,10 @@
     "Jordan_Algeria": {
       "result": "2",
       "goals": 3
+    },
+    "Portugal_Uzbekistan": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
@@ -283,6 +287,7 @@
     "Marcus Pedersen": 1,
     "Nizar Al Rashdan": 1,
     "Nadhir Benbouali": 1,
-    "Amine Gouiri": 1
+    "Amine Gouiri": 1,
+    "Cristiano Ronaldo": 1
   }
 }
