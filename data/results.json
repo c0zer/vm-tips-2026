@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T21:10:48.402Z",
+  "updatedAt": "2026-06-23T21:18:48.647Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -181,10 +181,6 @@
     "Portugal_Uzbekistan": {
       "result": "1",
       "goals": 5
-    },
-    "England_Ghana": {
-      "result": "X",
-      "goals": 0
     }
   },
   "roundTeams": {
