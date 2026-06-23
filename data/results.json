@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T17:22:57.884Z",
+  "updatedAt": "2026-06-23T17:31:06.083Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -9,6 +9,10 @@
     "Korea Republic_Czechia": {
       "result": "1",
       "goals": 3
+    },
+    "Canada_Bosnia-H.": {
+      "result": "X",
+      "goals": 2
     },
     "USA_Paraguay": {
       "result": "1",
@@ -285,6 +289,7 @@
     "Nadhir Benbouali": 1,
     "Amine Gouiri": 1,
     "Cristiano Ronaldo": 1,
-    "Nuno Mendes": 1
+    "Nuno Mendes": 1,
+    "Azizjon Ganiev": 1
   }
 }
