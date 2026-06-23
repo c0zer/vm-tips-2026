@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T04:30:57.246Z",
+  "updatedAt": "2026-06-23T04:40:43.847Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -175,8 +175,8 @@
       "goals": 5
     },
     "Jordan_Algeria": {
-      "result": "1",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -282,6 +282,7 @@
     "Trezeguet": 1,
     "Ousmane Dembélé": 1,
     "Marcus Pedersen": 1,
-    "Nizar Al Rashdan": 1
+    "Nizar Al Rashdan": 1,
+    "Nadhir Benbouali": 1
   }
 }
