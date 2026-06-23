@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T01:50:46.383Z",
+  "updatedAt": "2026-06-23T02:01:06.821Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -172,7 +172,7 @@
     },
     "Norway_Senegal": {
       "result": "1",
-      "goals": 4
+      "goals": 5
     }
   },
   "roundTeams": {
@@ -206,6 +206,7 @@
     "Cody Gakpo": 2,
     "Ayase Ueda": 2,
     "Mikel Oyarzabal": 2,
+    "Ismaïla Sarr": 2,
     "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
@@ -276,7 +277,6 @@
     "Mohamed Salah": 1,
     "Trezeguet": 1,
     "Ousmane Dembélé": 1,
-    "Marcus Pedersen": 1,
-    "Ismaïla Sarr": 1
+    "Marcus Pedersen": 1
   }
 }
