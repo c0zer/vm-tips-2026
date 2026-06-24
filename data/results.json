@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T20:40:44.068Z",
+  "updatedAt": "2026-06-24T20:50:49.542Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -200,7 +200,7 @@
     },
     "Bosnia-H._Qatar": {
       "result": "1",
-      "goals": 3
+      "goals": 4
     }
   },
   "roundTeams": {
@@ -232,6 +232,7 @@
     "Harry Kane": 2,
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
+    "Ermin Mahmic": 2,
     "Matheus Cunha": 2,
     "Brian Brobbey": 2,
     "Cody Gakpo": 2,
@@ -287,7 +288,6 @@
     "Jaminton Campaz": 1,
     "Michal Sadílek": 1,
     "Teboho Mokoena": 1,
-    "Ermin Mahmic": 1,
     "Granit Xhaka": 1,
     "Nathan-Dylan Saliba": 1,
     "Luis Romo": 1,
