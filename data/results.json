@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T02:50:42.483Z",
+  "updatedAt": "2026-06-24T03:01:08.705Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -189,6 +189,10 @@
     "Panama_Croatia": {
       "result": "2",
       "goals": 1
+    },
+    "Colombia_Congo DR": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
