@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T19:30:59.157Z",
+  "updatedAt": "2026-06-24T19:40:47.393Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -199,8 +199,8 @@
       "goals": 0
     },
     "Bosnia-H._Qatar": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 2
     }
   },
   "roundTeams": {
