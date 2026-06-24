@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T23:20:49.755Z",
+  "updatedAt": "2026-06-24T23:30:58.611Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -208,7 +208,7 @@
     },
     "Scotland_Brazil": {
       "result": "2",
-      "goals": 2
+      "goals": 3
     }
   },
   "roundTeams": {
@@ -229,6 +229,7 @@
     "Deniz Undav": 3,
     "Johan Manzambi": 3,
     "Jonathan David": 3,
+    "Matheus Cunha": 3,
     "Cyle Larin": 2,
     "Folarin Balogun": 2,
     "Kai Havertz": 2,
@@ -241,7 +242,6 @@
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
     "Ermin Mahmic": 2,
-    "Matheus Cunha": 2,
     "Brian Brobbey": 2,
     "Cody Gakpo": 2,
     "Ayase Ueda": 2,
