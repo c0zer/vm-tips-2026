@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T19:05:15.214Z",
+  "updatedAt": "2026-06-24T19:10:47.272Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -193,6 +193,14 @@
     "Colombia_Congo DR": {
       "result": "1",
       "goals": 1
+    },
+    "Switzerland_Canada": {
+      "result": "X",
+      "goals": 0
+    },
+    "Bosnia-H._Qatar": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
