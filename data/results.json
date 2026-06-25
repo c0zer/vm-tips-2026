@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T01:01:07.214Z",
+  "updatedAt": "2026-06-25T01:10:48.434Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -209,6 +209,14 @@
     "Scotland_Brazil": {
       "result": "2",
       "goals": 3
+    },
+    "Czechia_Mexico": {
+      "result": "X",
+      "goals": 0
+    },
+    "South Africa_Korea Republic": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
