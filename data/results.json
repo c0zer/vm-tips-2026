@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T02:22:08.397Z",
+  "updatedAt": "2026-06-25T02:30:58.100Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -212,11 +212,11 @@
     },
     "Czechia_Mexico": {
       "result": "2",
-      "goals": 1
+      "goals": 2
     },
     "South Africa_Korea Republic": {
-      "result": "X",
-      "goals": 0
+      "result": "1",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -238,6 +238,7 @@
     "Johan Manzambi": 3,
     "Jonathan David": 3,
     "Matheus Cunha": 3,
+    "Julián Quiñones": 2,
     "Cyle Larin": 2,
     "Folarin Balogun": 2,
     "Kai Havertz": 2,
@@ -256,7 +257,6 @@
     "Mikel Oyarzabal": 2,
     "Ismaïla Sarr": 2,
     "Cristiano Ronaldo": 2,
-    "Julián Quiñones": 1,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
     "In-beom Hwang": 1,
