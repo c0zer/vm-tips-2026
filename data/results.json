@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T23:01:05.237Z",
+  "updatedAt": "2026-06-25T23:10:46.867Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -225,6 +225,14 @@
     "Curaçao_Ivory Coast": {
       "result": "2",
       "goals": 2
+    },
+    "Tunisia_Netherlands": {
+      "result": "2",
+      "goals": 1
+    },
+    "Japan_Sweden": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
@@ -246,6 +254,7 @@
     "Johan Manzambi": 3,
     "Jonathan David": 3,
     "Matheus Cunha": 3,
+    "Brian Brobbey": 3,
     "Julián Quiñones": 2,
     "Cyle Larin": 2,
     "Folarin Balogun": 2,
@@ -259,7 +268,6 @@
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
     "Ermin Mahmic": 2,
-    "Brian Brobbey": 2,
     "Cody Gakpo": 2,
     "Ayase Ueda": 2,
     "Mikel Oyarzabal": 2,
