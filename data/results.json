@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T21:20:45.101Z",
+  "updatedAt": "2026-06-25T21:30:55.578Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -217,6 +217,14 @@
     "South Africa_Korea Republic": {
       "result": "1",
       "goals": 1
+    },
+    "Ecuador_Germany": {
+      "result": "X",
+      "goals": 2
+    },
+    "Curaçao_Ivory Coast": {
+      "result": "2",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -257,6 +265,7 @@
     "Mikel Oyarzabal": 2,
     "Ismaïla Sarr": 2,
     "Cristiano Ronaldo": 2,
+    "Nicolas Pépé": 2,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
     "In-beom Hwang": 1,
@@ -327,7 +336,6 @@
     "Amine Gouiri": 1,
     "Nuno Mendes": 1,
     "Rafael Leão": 1,
-    "Ante Budimir": 1,
-    "Promise Akinpelu": 1
+    "Ante Budimir": 1
   }
 }
