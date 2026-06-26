@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T00:10:42.989Z",
+  "updatedAt": "2026-06-26T00:20:46.849Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -217,22 +217,6 @@
     "South Africa_Korea Republic": {
       "result": "1",
       "goals": 1
-    },
-    "Ecuador_Germany": {
-      "result": "1",
-      "goals": 3
-    },
-    "Curaçao_Ivory Coast": {
-      "result": "2",
-      "goals": 2
-    },
-    "Tunisia_Netherlands": {
-      "result": "2",
-      "goals": 2
-    },
-    "Japan_Sweden": {
-      "result": "X",
-      "goals": 0
     }
   },
   "roundTeams": {
