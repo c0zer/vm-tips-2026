@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T21:01:06.954Z",
+  "updatedAt": "2026-06-26T21:10:49.297Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -210,6 +210,30 @@
       "result": "2",
       "goals": 3
     },
+    "Czechia_Mexico": {
+      "result": "2",
+      "goals": 3
+    },
+    "South Africa_Korea Republic": {
+      "result": "1",
+      "goals": 1
+    },
+    "Ecuador_Germany": {
+      "result": "1",
+      "goals": 3
+    },
+    "Curaçao_Ivory Coast": {
+      "result": "2",
+      "goals": 2
+    },
+    "Tunisia_Netherlands": {
+      "result": "2",
+      "goals": 4
+    },
+    "Japan_Sweden": {
+      "result": "X",
+      "goals": 2
+    },
     "Turkey_USA": {
       "result": "1",
       "goals": 5
@@ -220,7 +244,7 @@
     },
     "Norway_France": {
       "result": "2",
-      "goals": 4
+      "goals": 5
     },
     "Senegal_Iraq": {
       "result": "1",
