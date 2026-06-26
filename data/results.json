@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T00:20:46.849Z",
+  "updatedAt": "2026-06-26T00:30:56.537Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -217,6 +217,22 @@
     "South Africa_Korea Republic": {
       "result": "1",
       "goals": 1
+    },
+    "Ecuador_Germany": {
+      "result": "1",
+      "goals": 3
+    },
+    "Curaçao_Ivory Coast": {
+      "result": "2",
+      "goals": 2
+    },
+    "Tunisia_Netherlands": {
+      "result": "2",
+      "goals": 4
+    },
+    "Japan_Sweden": {
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -253,6 +269,7 @@
     "Ruben Vargas": 2,
     "Ermin Mahmic": 2,
     "Cody Gakpo": 2,
+    "Anthony Elanga": 2,
     "Ayase Ueda": 2,
     "Mikel Oyarzabal": 2,
     "Ismaïla Sarr": 2,
@@ -310,7 +327,6 @@
     "Luis Romo": 1,
     "Alex Freeman": 1,
     "Matías Galarza": 1,
-    "Anthony Elanga": 1,
     "Franck Kessié": 1,
     "Junya Ito": 1,
     "Lamine Yamal": 1,
