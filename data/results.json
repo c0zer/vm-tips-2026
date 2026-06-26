@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T20:40:45.297Z",
+  "updatedAt": "2026-06-26T20:50:44.468Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -248,7 +248,7 @@
     },
     "Senegal_Iraq": {
       "result": "1",
-      "goals": 3
+      "goals": 4
     }
   },
   "roundTeams": {
@@ -292,6 +292,7 @@
     "Mikel Oyarzabal": 2,
     "Cristiano Ronaldo": 2,
     "Nicolas Pépé": 2,
+    "Pape Gueye": 2,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
     "In-beom Hwang": 1,
@@ -359,7 +360,6 @@
     "Nadhir Benbouali": 1,
     "Amine Gouiri": 1,
     "Nuno Mendes": 1,
-    "Rafael Leão": 1,
-    "Ante Budimir": 1
+    "Rafael Leão": 1
   }
 }
