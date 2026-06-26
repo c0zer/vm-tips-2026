@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T02:01:03.677Z",
+  "updatedAt": "2026-06-26T02:10:27.082Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -233,6 +233,14 @@
     "Japan_Sweden": {
       "result": "X",
       "goals": 2
+    },
+    "Turkey_USA": {
+      "result": "2",
+      "goals": 1
+    },
+    "Paraguay_Australia": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
