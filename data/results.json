@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T20:20:44.764Z",
+  "updatedAt": "2026-06-26T20:30:57.268Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -248,7 +248,7 @@
     },
     "Senegal_Iraq": {
       "result": "1",
-      "goals": 1
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -272,6 +272,7 @@
     "Jonathan David": 3,
     "Matheus Cunha": 3,
     "Brian Brobbey": 3,
+    "Ismaïla Sarr": 3,
     "Julián Quiñones": 2,
     "Cyle Larin": 2,
     "Folarin Balogun": 2,
@@ -289,7 +290,6 @@
     "Anthony Elanga": 2,
     "Ayase Ueda": 2,
     "Mikel Oyarzabal": 2,
-    "Ismaïla Sarr": 2,
     "Cristiano Ronaldo": 2,
     "Nicolas Pépé": 2,
     "Raúl Jiménez": 1,
