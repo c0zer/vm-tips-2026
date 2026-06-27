@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T03:10:48.841Z",
+  "updatedAt": "2026-06-27T03:20:47.138Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -259,8 +259,8 @@
       "goals": 0
     },
     "Egypt_Iran": {
-      "result": "1",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -294,6 +294,7 @@
     "Yasin Ayari": 2,
     "Maximiliano Araújo": 2,
     "Elijah Just": 2,
+    "Ramin Rezaeian": 2,
     "Harry Kane": 2,
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
@@ -331,7 +332,6 @@
     "Mattias Svanberg": 1,
     "Emam Ashour": 1,
     "Abdulelah Al Amri": 1,
-    "Ramin Rezaeian": 1,
     "Mohammad Mohebi": 1,
     "Bradley Barcola": 1,
     "Ibrahim M'Baye": 1,
