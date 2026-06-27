@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T21:02:35.247Z",
+  "updatedAt": "2026-06-27T21:10:48.937Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -265,6 +265,10 @@
     "Egypt_Iran": {
       "result": "X",
       "goals": 2
+    },
+    "Panama_England": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
