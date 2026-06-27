@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T22:20:46.772Z",
+  "updatedAt": "2026-06-27T22:30:57.288Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -267,8 +267,8 @@
       "goals": 2
     },
     "Panama_England": {
-      "result": "X",
-      "goals": 0
+      "result": "2",
+      "goals": 2
     },
     "Croatia_Ghana": {
       "result": "1",
@@ -293,6 +293,7 @@
     "Ismael Saibari": 3,
     "Deniz Undav": 3,
     "Elijah Just": 3,
+    "Harry Kane": 3,
     "Johan Manzambi": 3,
     "Jonathan David": 3,
     "Matheus Cunha": 3,
@@ -307,7 +308,7 @@
     "Yasin Ayari": 2,
     "Maximiliano Araújo": 2,
     "Ramin Rezaeian": 2,
-    "Harry Kane": 2,
+    "Jude Bellingham": 2,
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
     "Ermin Mahmic": 2,
@@ -357,7 +358,6 @@
     "Yoane Wissa": 1,
     "Martin Baturina": 1,
     "Petar Musa": 1,
-    "Jude Bellingham": 1,
     "Marcus Rashford": 1,
     "Caleb Yirenkyi": 1,
     "Abbosbek Fayzullaev": 1,
