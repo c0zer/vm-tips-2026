@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T03:50:49.140Z",
+  "updatedAt": "2026-06-27T04:01:10.191Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -257,6 +257,10 @@
     "Cape Verde_Saudi Arabia": {
       "result": "X",
       "goals": 0
+    },
+    "New Zealand_Belgium": {
+      "result": "2",
+      "goals": 1
     },
     "Egypt_Iran": {
       "result": "X",
