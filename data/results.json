@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T00:50:45.157Z",
+  "updatedAt": "2026-06-27T01:01:07.085Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -249,6 +249,14 @@
     "Senegal_Iraq": {
       "result": "1",
       "goals": 5
+    },
+    "Uruguay_Spain": {
+      "result": "2",
+      "goals": 1
+    },
+    "Cape Verde_Saudi Arabia": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
