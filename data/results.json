@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T01:20:45.195Z",
+  "updatedAt": "2026-06-27T01:30:58.078Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -239,6 +239,22 @@
       "goals": 5
     },
     "Paraguay_Australia": {
+      "result": "X",
+      "goals": 0
+    },
+    "Norway_France": {
+      "result": "2",
+      "goals": 5
+    },
+    "Senegal_Iraq": {
+      "result": "1",
+      "goals": 5
+    },
+    "Uruguay_Spain": {
+      "result": "2",
+      "goals": 1
+    },
+    "Cape Verde_Saudi Arabia": {
       "result": "X",
       "goals": 0
     }
