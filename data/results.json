@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T04:10:46.415Z",
+  "updatedAt": "2026-06-27T04:20:48.392Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -260,7 +260,7 @@
     },
     "New Zealand_Belgium": {
       "result": "2",
-      "goals": 1
+      "goals": 2
     },
     "Egypt_Iran": {
       "result": "X",
@@ -310,6 +310,7 @@
     "Cristiano Ronaldo": 2,
     "Nicolas Pépé": 2,
     "Pape Gueye": 2,
+    "Leandro Trossard": 2,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
     "In-beom Hwang": 1,
@@ -375,7 +376,6 @@
     "Nizar Al Rashdan": 1,
     "Nadhir Benbouali": 1,
     "Amine Gouiri": 1,
-    "Nuno Mendes": 1,
-    "Rafael Leão": 1
+    "Nuno Mendes": 1
   }
 }
