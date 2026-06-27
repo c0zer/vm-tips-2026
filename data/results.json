@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T22:40:45.438Z",
+  "updatedAt": "2026-06-27T22:50:45.875Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -242,6 +242,14 @@
       "result": "X",
       "goals": 0
     },
+    "Norway_France": {
+      "result": "2",
+      "goals": 5
+    },
+    "Senegal_Iraq": {
+      "result": "1",
+      "goals": 5
+    },
     "Uruguay_Spain": {
       "result": "2",
       "goals": 1
@@ -255,16 +263,16 @@
       "goals": 6
     },
     "Egypt_Iran": {
-      "result": "2",
-      "goals": 3
+      "result": "X",
+      "goals": 2
     },
     "Panama_England": {
       "result": "2",
       "goals": 2
     },
     "Croatia_Ghana": {
-      "result": "X",
-      "goals": 2
+      "result": "1",
+      "goals": 3
     }
   },
   "roundTeams": {
