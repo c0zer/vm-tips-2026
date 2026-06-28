@@ -90,7 +90,7 @@ async function main() {
 
   // Also check knockout matches for live status
   console.log('Fetching knockout matches...');
-  const koData = await apiGet(`/v4/competitions/${COMPETITION}/matches?stage=ROUND_OF_32,ROUND_OF_16,QUARTER_FINALS,SEMI_FINALS,THIRD_PLACE,FINAL`);
+  const koData = await apiGet(`/v4/competitions/${COMPETITION}/matches?stage=LAST_32,LAST_16,QUARTER_FINALS,SEMI_FINALS,THIRD_PLACE,FINAL`);
 
   const roundTeams = {
     sexton: new Set(),
@@ -103,8 +103,8 @@ async function main() {
   };
 
   const stageMap = {
-    ROUND_OF_32: 'sexton',
-    ROUND_OF_16: 'atton',
+    LAST_32: 'sexton',
+    LAST_16: 'atton',
     QUARTER_FINALS: 'kvarts',
     SEMI_FINALS: 'semi',
     FINAL: 'final',

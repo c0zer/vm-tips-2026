@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T08:50:45.895Z",
+  "updatedAt": "2026-06-28T09:07:08.237Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -292,7 +292,40 @@
     }
   },
   "roundTeams": {
-    "sexton": [],
+    "sexton": [
+      "South Africa",
+      "Canada",
+      "Brazil",
+      "Japan",
+      "Germany",
+      "Paraguay",
+      "Netherlands",
+      "Morocco",
+      "Ivory Coast",
+      "Norway",
+      "France",
+      "Sweden",
+      "Mexico",
+      "Ecuador",
+      "England",
+      "Congo DR",
+      "Belgium",
+      "Senegal",
+      "USA",
+      "Bosnia-H.",
+      "Spain",
+      "Austria",
+      "Portugal",
+      "Croatia",
+      "Switzerland",
+      "Algeria",
+      "Australia",
+      "Egypt",
+      "Argentina",
+      "Cape Verde",
+      "Colombia",
+      "Ghana"
+    ],
     "atton": [],
     "kvarts": [],
     "semi": [],
