@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T01:31:03.608Z",
+  "updatedAt": "2026-06-28T01:40:47.920Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -265,6 +265,22 @@
     "Egypt_Iran": {
       "result": "X",
       "goals": 2
+    },
+    "Panama_England": {
+      "result": "2",
+      "goals": 2
+    },
+    "Croatia_Ghana": {
+      "result": "1",
+      "goals": 3
+    },
+    "Colombia_Portugal": {
+      "result": "X",
+      "goals": 0
+    },
+    "Congo DR_Uzbekistan": {
+      "result": "1",
+      "goals": 4
     }
   },
   "roundTeams": {
