@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T00:20:47.168Z",
+  "updatedAt": "2026-06-28T00:30:59.778Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -273,6 +273,14 @@
     "Croatia_Ghana": {
       "result": "1",
       "goals": 3
+    },
+    "Colombia_Portugal": {
+      "result": "X",
+      "goals": 0
+    },
+    "Congo DR_Uzbekistan": {
+      "result": "2",
+      "goals": 1
     }
   },
   "roundTeams": {
