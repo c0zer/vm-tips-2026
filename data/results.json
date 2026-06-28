@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T01:01:09.349Z",
+  "updatedAt": "2026-06-28T01:10:46.657Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -279,8 +279,8 @@
       "goals": 0
     },
     "Congo DR_Uzbekistan": {
-      "result": "2",
-      "goals": 1
+      "result": "X",
+      "goals": 2
     }
   },
   "roundTeams": {
@@ -316,6 +316,7 @@
     "Yasin Ayari": 2,
     "Maximiliano Araújo": 2,
     "Ramin Rezaeian": 2,
+    "Yoane Wissa": 2,
     "Jude Bellingham": 2,
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
@@ -363,7 +364,6 @@
     "Ali Olwan": 1,
     "Marko Arnautovic": 1,
     "Joao Neves": 1,
-    "Yoane Wissa": 1,
     "Martin Baturina": 1,
     "Petar Musa": 1,
     "Marcus Rashford": 1,
