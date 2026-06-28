@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T01:20:48.863Z",
+  "updatedAt": "2026-06-28T01:31:03.608Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -265,22 +265,6 @@
     "Egypt_Iran": {
       "result": "X",
       "goals": 2
-    },
-    "Panama_England": {
-      "result": "2",
-      "goals": 2
-    },
-    "Croatia_Ghana": {
-      "result": "1",
-      "goals": 3
-    },
-    "Colombia_Portugal": {
-      "result": "X",
-      "goals": 0
-    },
-    "Congo DR_Uzbekistan": {
-      "result": "1",
-      "goals": 3
     }
   },
   "roundTeams": {
@@ -301,6 +285,7 @@
     "Ismael Saibari": 3,
     "Deniz Undav": 3,
     "Elijah Just": 3,
+    "Yoane Wissa": 3,
     "Harry Kane": 3,
     "Johan Manzambi": 3,
     "Jonathan David": 3,
@@ -316,7 +301,6 @@
     "Yasin Ayari": 2,
     "Maximiliano Araújo": 2,
     "Ramin Rezaeian": 2,
-    "Yoane Wissa": 2,
     "Jude Bellingham": 2,
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
