@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T03:41:00.091Z",
+  "updatedAt": "2026-06-28T03:47:29.667Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -284,7 +284,7 @@
     },
     "Jordan_Argentina": {
       "result": "2",
-      "goals": 3
+      "goals": 4
     },
     "Algeria_Austria": {
       "result": "X",
@@ -301,7 +301,7 @@
     "thirdPlace": ""
   },
   "goalscorers": {
-    "Lionel Messi": 5,
+    "Lionel Messi": 6,
     "Vinicius Junior": 4,
     "Kylian Mbappé": 4,
     "Erling Haaland": 4,
