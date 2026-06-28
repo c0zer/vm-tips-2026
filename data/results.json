@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T02:50:43.158Z",
+  "updatedAt": "2026-06-28T03:01:12.801Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -284,6 +284,10 @@
     },
     "Jordan_Argentina": {
       "result": "2",
+      "goals": 2
+    },
+    "Algeria_Austria": {
+      "result": "X",
       "goals": 2
     }
   },
