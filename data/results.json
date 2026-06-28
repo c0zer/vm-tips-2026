@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T02:22:09.524Z",
+  "updatedAt": "2026-06-28T02:31:00.466Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -283,8 +283,8 @@
       "goals": 4
     },
     "Jordan_Argentina": {
-      "result": "X",
-      "goals": 0
+      "result": "2",
+      "goals": 1
     }
   },
   "roundTeams": {
@@ -321,6 +321,7 @@
     "Yasin Ayari": 2,
     "Maximiliano Araújo": 2,
     "Ramin Rezaeian": 2,
+    "Marko Arnautovic": 2,
     "Jude Bellingham": 2,
     "Daniel Muñoz": 2,
     "Ruben Vargas": 2,
@@ -366,7 +367,6 @@
     "Leo Østigård": 1,
     "Romano Schmid": 1,
     "Ali Olwan": 1,
-    "Marko Arnautovic": 1,
     "Joao Neves": 1,
     "Martin Baturina": 1,
     "Petar Musa": 1,
