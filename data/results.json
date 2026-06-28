@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T02:01:05.348Z",
+  "updatedAt": "2026-06-28T02:10:48.793Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -281,6 +281,10 @@
     "Congo DR_Uzbekistan": {
       "result": "1",
       "goals": 4
+    },
+    "Jordan_Argentina": {
+      "result": "X",
+      "goals": 0
     }
   },
   "roundTeams": {
