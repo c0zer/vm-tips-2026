@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T03:50:47.931Z",
+  "updatedAt": "2026-06-28T04:01:12.032Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -287,8 +287,8 @@
       "goals": 4
     },
     "Algeria_Austria": {
-      "result": "X",
-      "goals": 4
+      "result": "1",
+      "goals": 5
     }
   },
   "roundTeams": {
@@ -338,6 +338,7 @@
     "Nicolas Pépé": 2,
     "Pape Gueye": 2,
     "Leandro Trossard": 2,
+    "Riyad Mahrez": 2,
     "Raúl Jiménez": 1,
     "Ladislav Krejčí": 1,
     "In-beom Hwang": 1,
@@ -399,7 +400,6 @@
     "Marcus Pedersen": 1,
     "Nizar Al Rashdan": 1,
     "Nadhir Benbouali": 1,
-    "Amine Gouiri": 1,
-    "Nuno Mendes": 1
+    "Amine Gouiri": 1
   }
 }
