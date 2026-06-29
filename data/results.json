@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T06:10:45.625Z",
+  "updatedAt": "2026-06-29T06:20:46.936Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -326,7 +326,9 @@
       "Colombia",
       "Ghana"
     ],
-    "atton": [],
+    "atton": [
+      "Canada"
+    ],
     "kvarts": [],
     "semi": [],
     "final": [],
