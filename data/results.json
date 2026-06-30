@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T06:10:53.839Z",
+  "updatedAt": "2026-06-30T06:20:49.509Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -327,7 +327,10 @@
       "Ghana"
     ],
     "atton": [
-      "Canada"
+      "Canada",
+      "Morocco",
+      "Paraguay",
+      "Brazil"
     ],
     "kvarts": [],
     "semi": [],
