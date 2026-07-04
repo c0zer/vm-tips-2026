@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T06:11:02.313Z",
+  "updatedAt": "2026-07-04T06:21:02.817Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -335,8 +335,14 @@
       "Norway",
       "Mexico",
       "England",
+      "Portugal",
+      "Spain",
       "USA",
-      "Belgium"
+      "Belgium",
+      "Argentina",
+      "Egypt",
+      "Switzerland",
+      "Colombia"
     ],
     "kvarts": [],
     "semi": [],
