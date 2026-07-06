@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T06:11:05.437Z",
+  "updatedAt": "2026-07-06T06:21:06.059Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -346,7 +346,9 @@
     ],
     "kvarts": [
       "France",
-      "Morocco"
+      "Morocco",
+      "Norway",
+      "England"
     ],
     "semi": [],
     "final": [],
