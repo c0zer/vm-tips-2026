@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T06:11:10.065Z",
+  "updatedAt": "2026-07-10T06:21:10.061Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -354,7 +354,9 @@
       "Argentina",
       "Switzerland"
     ],
-    "semi": [],
+    "semi": [
+      "France"
+    ],
     "final": [],
     "winner": "",
     "thirdPlace": ""
