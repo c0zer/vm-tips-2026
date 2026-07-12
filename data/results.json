@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T06:01:33.153Z",
+  "updatedAt": "2026-07-12T06:11:10.106Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -356,7 +356,9 @@
     ],
     "semi": [
       "France",
-      "Spain"
+      "Spain",
+      "England",
+      "Argentina"
     ],
     "final": [],
     "winner": "",
