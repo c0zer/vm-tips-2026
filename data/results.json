@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T01:11:11.489Z",
+  "updatedAt": "2026-11-26T01:24:04.913Z",
   "liveMatches": [],
   "groupMatches": {
     "Mexico_South Africa": {
@@ -292,13 +292,80 @@
     }
   },
   "roundTeams": {
-    "sexton": [],
-    "atton": [],
-    "kvarts": [],
-    "semi": [],
-    "final": [],
-    "winner": "",
-    "thirdPlace": ""
+    "sexton": [
+      "South Africa",
+      "Canada",
+      "Brazil",
+      "Japan",
+      "Germany",
+      "Paraguay",
+      "Netherlands",
+      "Morocco",
+      "Ivory Coast",
+      "Norway",
+      "France",
+      "Sweden",
+      "Mexico",
+      "Ecuador",
+      "England",
+      "Congo DR",
+      "Belgium",
+      "Senegal",
+      "USA",
+      "Bosnia-H.",
+      "Spain",
+      "Austria",
+      "Portugal",
+      "Croatia",
+      "Switzerland",
+      "Algeria",
+      "Australia",
+      "Egypt",
+      "Argentina",
+      "Cape Verde",
+      "Colombia",
+      "Ghana"
+    ],
+    "atton": [
+      "Canada",
+      "Morocco",
+      "Paraguay",
+      "France",
+      "Brazil",
+      "Norway",
+      "Mexico",
+      "England",
+      "Portugal",
+      "Spain",
+      "USA",
+      "Belgium",
+      "Argentina",
+      "Egypt",
+      "Switzerland",
+      "Colombia"
+    ],
+    "kvarts": [
+      "France",
+      "Morocco",
+      "Spain",
+      "Belgium",
+      "Norway",
+      "England",
+      "Argentina",
+      "Switzerland"
+    ],
+    "semi": [
+      "France",
+      "Spain",
+      "England",
+      "Argentina"
+    ],
+    "final": [
+      "Spain",
+      "Argentina"
+    ],
+    "winner": "Spain",
+    "thirdPlace": "England"
   },
   "goalscorers": {
     "Kylian Mbappé": 10,
